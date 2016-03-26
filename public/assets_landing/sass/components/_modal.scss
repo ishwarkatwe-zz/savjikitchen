@@ -1,0 +1,144 @@
+.modal
+{
+    .modal-dialog
+    {
+        margin: 5vh auto;
+        background-color: #FFFFFF;
+        height: 90vh;
+
+        .modal-content
+        {
+            border: 0px;
+        }
+        .recipe_modal
+        {
+            background-image: url(http://www.knorr.com/Images/1020/1020-245958.jpg);
+            background-size: auto 100%;
+            background-position: right;
+            height: 90vh;
+
+
+            .left_box
+            {
+                background-color: #FFFFFF;
+                height: 90vh;
+                padding: 0px;
+
+                .top_box
+                {
+                    background-color: #1B1627;
+                    overflow: hidden;
+                    color:#FFFFFF;
+                    padding:20px;
+                    position: relative;
+                    padding-bottom:0px;
+
+
+
+                    .close
+                    {
+                        font-size: 20px;
+                        margin-top: -12px;
+                        margin-right: -9px;
+                        color:#FFFFFF;
+                        opacity: 1;
+
+                    }
+
+                    .title
+                    {
+                        font-family: $JosefinSans;
+                        font-size: 24px;
+                    }
+                    .desp
+                    {
+                        margin-top: 10px;
+                        font-size: 12px;
+                    }
+
+                    .nav-tabs
+                    {
+                        border-bottom: 0px;
+                        margin-top: 20px;
+
+                        li
+                        {
+                            a
+                            {
+                                padding: 0px;
+                                color:rgba(255, 255, 255, 0.6);
+                                background-color: transparent;
+                                border: 0px;
+                                margin-bottom: 2px;
+                                text-transform: uppercase;
+                                padding-bottom: 10px;
+                                margin-left: 20px;
+                                margin-right: 20px;
+
+
+                                &:hover
+                                    {
+                                    border-bottom: 3px solid rgba(3, 169, 244, 0.52);
+                                }
+                            }
+                        }
+
+                        li.active
+                        {
+                            a
+                            {
+                                color: #FFFFFF;
+                                border-bottom: 3px solid #03A9F4;
+                            }
+                        }
+                    }
+                }
+
+
+                .tab-content
+                {
+                    position: relative;
+                    .like
+                    {
+                        background-color: #03A9F4;
+                        height: 50px;
+                        width: 50px;
+                        display: inline-block;
+                        color: #FFFFFF;
+                        text-align: center;
+                        font-size: 20px;
+                        line-height: 50px;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: -23px;
+                        right: 30px;
+                    }
+
+                    .tab-pane
+                    {
+                        padding: 20px;
+                        ul
+                        {
+                            padding: 0px;
+                            padding-left: 20px;
+                            list-style: none;
+
+                            li
+                            {
+                                margin-bottom: 4px;
+                            }
+                        }
+
+                        ol
+                        {
+                            li
+                            {
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -16,13 +16,16 @@
         <input type="password" class="form-control" name="password" id="password" placeholder="Password" required="required">
     </div>
 
-    <div class="form-group">
-        <input type="checkbox" name="remember"> Remember Me
+    <div class="checkbox checkbox-primary">
+        <input type="checkbox" id="checkbox1" checked>
+        <label for="checkbox1">
+            Remember me
+        </label>
     </div>
 
     <div>
         <button type="submit" class="btn btn-primary">Login</button>
-        <a href="{{ url('auth/register') }}" class="btn btn-success">Register</a>
+        <a href="{{ url('auth/register') }}" class="btn btn-default">Register</a>
     </div>
 </form>
 @stop

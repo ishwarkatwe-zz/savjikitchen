@@ -1,0 +1,418 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 Jan, 2016, 6:12:31 PM
+    Author     : Alivenow
+*/
+.about {
+  height: 85vh;
+  background: #FFFFFF;
+  position: relative; }
+  .about .daniya {
+    height: 100vh;
+    margin-left: -15px; }
+  .about .desp {
+    padding: 10px 50px 0px 50px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 Jan, 2016, 6:21:11 PM
+    Author     : Alivenow
+*/
+.light-header {
+  text-align: center;
+  color: #e63b4d;
+  text-align: center;
+  color: #e63b4d;
+  border-bottom: 2px solid;
+  width: 50%;
+  display: inline-block;
+  font-family: 'Josefin Sans', sans-serif; }
+
+.white-header {
+  text-align: center;
+  color: #FFFFFF;
+  width: 50%;
+  display: inline-block;
+  font-family: 'Josefin Sans', sans-serif;
+  vertical-align: middle; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 Jan, 2016, 6:50:41 PM
+    Author     : Alivenow
+*/
+.home {
+  background-color: #DDDDDD; }
+  .home .content {
+    min-height: 100vh; }
+    .home .content .header {
+      background: url(../images/3.jpg) center no-repeat;
+      height: 200px; }
+      .home .content .header .black {
+        background-color: rgba(0, 0, 0, 0.5);
+        min-height: 200px;
+        position: relative; }
+        @media only screen and (max-width: 767px) {
+          .home .content .header .black {
+            padding-left: 15px;
+            padding-right: 15px; } }
+        .home .content .header .black h1 {
+          line-height: 100px;
+          font-family: 'Damion', cursive;
+          font-size: 50px; }
+        .home .content .header .black .search {
+          width: 50%;
+          margin: auto;
+          position: relative; }
+          @media only screen and (max-width: 767px) {
+            .home .content .header .black .search {
+              width: 100%; } }
+          .home .content .header .black .search .form-control {
+            border-radius: 0px;
+            border: 2px solid #e63b4d;
+            font-size: 19px;
+            height: 45px; }
+          .home .content .header .black .search .btn {
+            position: absolute;
+            top: 5px;
+            right: 5px; }
+          .home .content .header .black .search .filter {
+            position: absolute;
+            background: #FFFFFF;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            z-index: 10; }
+            .home .content .header .black .search .filter ul {
+              list-style: none;
+              padding: 0px; }
+              .home .content .header .black .search .filter ul li {
+                clear: both; }
+                .home .content .header .black .search .filter ul li a {
+                  text-decoration: none;
+                  color: #000000;
+                  font-family: 'Josefin Sans', sans-serif;
+                  display: block; }
+                  .home .content .header .black .search .filter ul li a img {
+                    float: left;
+                    width: 100px;
+                    padding-right: 10px;
+                    padding-left: 10px;
+                    margin-top: 2px;
+                    margin-bottom: 2px; }
+                  .home .content .header .black .search .filter ul li a h4 {
+                    text-align: left;
+                    margin-bottom: 0px; }
+                  .home .content .header .black .search .filter ul li a p {
+                    text-align: left;
+                    color: rgba(0, 0, 0, 0.68); }
+                    .home .content .header .black .search .filter ul li a p span {
+                      color: #e63b4d; }
+                  .home .content .header .black .search .filter ul li a:hover {
+                    background-color: #F1F1F1; }
+
+.recipes {
+  padding: 20px; }
+  .recipes .btn-group {
+    margin-bottom: 20px; }
+  .recipes .thumbnail {
+    padding: 0px;
+    box-shadow: 1px 1px 1px 1px #C7C7C7;
+    border-radius: 0px; }
+    .recipes .thumbnail .image {
+      position: relative; }
+      .recipes .thumbnail .image .fav {
+        position: absolute;
+        right: 10px;
+        top: 0px;
+        color: #000000;
+        font-size: 30px; }
+      .recipes .thumbnail .image .cat {
+        position: absolute;
+        bottom: 0px;
+        background-color: #e63b4d;
+        padding: 10px;
+        color: #FFFFFF; }
+      .recipes .thumbnail .image .waves-effect {
+        width: 100%; }
+        .recipes .thumbnail .image .waves-effect img {
+          width: 100%; }
+    .recipes .thumbnail .caption .title {
+      font-size: 14px;
+      font-size: 20px;
+      font-family: 'Josefin Sans', sans-serif; }
+    .recipes .thumbnail .footer .awatar {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      float: left;
+      margin-left: 10px; }
+    .recipes .thumbnail .footer .name {
+      margin-left: 70px; }
+      .recipes .thumbnail .footer .name p {
+        font-family: 'Josefin Sans', sans-serif;
+        color: #e63b4d;
+        font-size: 20px;
+        margin-bottom: 0px; }
+      .recipes .thumbnail .footer .name span {
+        color: #DDD;
+        color: #A2A2A2;
+        font-size: 12px; }
+    .recipes .thumbnail .footer .likes {
+      float: right;
+      color: #e63b4d;
+      font-size: 16px;
+      line-height: 50px;
+      margin-right: 10px; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25 Jan, 2016, 6:22:03 PM
+    Author     : Alivenow
+*/
+.btn {
+  border-radius: 0px;
+  font-family: 'Josefin Sans', sans-serif; }
+
+.btn-primary {
+  background-color: #e63b4d;
+  border-color: #e63b4d; }
+  .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .btn-primary:active:hover {
+    background-color: #d31b2e;
+    border-color: #e63b4d;
+    outline: none; }
+
+.btn-default {
+  background-color: #FFFFFF;
+  border-color: #e63b4d;
+  color: #e63b4d; }
+  .btn-default:active, .btn-default:focus, .btn-default:hover {
+    outline: none;
+    border-color: #e63b4d;
+    color: #e63b4d; }
+
+.btn-login {
+  background: transparent;
+  color: #FFFFFF;
+  border-width: 2px;
+  border-color: white;
+  margin-top: 5px;
+  margin-right: 15px;
+  margin-top: 15px;
+  font-size: 16px;
+  float: right; }
+  .btn-login i {
+    font-size: 20px; }
+  .btn-login:hover {
+    color: #FFFFFF; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 Jan, 2016, 12:08:06 PM
+    Author     : Alivenow
+*/
+.register-page .black {
+  padding-top: 2%; }
+
+.register-page .register-box {
+  margin: 0px;
+  margin: auto; }
+  .register-page .register-box .register-logo {
+    font-family: 'Josefin Sans', sans-serif; }
+    .register-page .register-box .register-logo a {
+      color: #FFFFFF; }
+  .register-page .register-box .register-box-body {
+    background-color: rgba(255, 255, 255, 0.78); }
+    .register-page .register-box .register-box-body .link {
+      color: #e63b4d; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 Jan, 2016, 12:26:52 PM
+    Author     : Alivenow
+*/
+.black {
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+  position: relative; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 Jan, 2016, 1:48:36 PM
+    Author     : Alivenow
+*/
+.form-group .form-control {
+  font-family: 'Josefin Sans', sans-serif; }
+  .form-group .form-control:focus {
+    border-color: #e63b4d; }
+
+.checkbox label::before {
+  border-color: #e63b4d; }
+
+.checkbox-primary input[type="checkbox"]:checked + label::before, .checkbox-primary input[type="radio"]:checked + label::before {
+  border-color: #e63b4d;
+  background-color: #e63b4d; }
+
+input:focus, input:active {
+  outline: none; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 Jan, 2016, 7:37:39 PM
+    Author     : Alivenow
+*/
+.skin-red-light .main-header .logo {
+  background-color: #e63b4d; }
+  .skin-red-light .main-header .logo:hover {
+    background-color: #d31b2e; }
+
+.skin-red-light .main-header .navbar {
+  background-color: #e63b4d; }
+  .skin-red-light .main-header .navbar .sidebar-toggle:hover {
+    background-color: #d31b2e; }
+
+.skin-red-light .main-header li.user-header {
+  background-color: #d31b2e; }
+
+.home_footer {
+  background: #e63b4d;
+  min-height: 100px;
+  width: 100%; }
+  .home_footer .menu {
+    list-style: none;
+    padding: 0px;
+    padding-top: 10px; }
+    .home_footer .menu li {
+      float: left; }
+      .home_footer .menu li a {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 16px;
+        color: #FFFFFF;
+        margin-right: 30px; }
+  .home_footer p {
+    margin-top: 40px;
+    color: #FFFFFF;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 800;
+    margin-bottom: 0px; }
+  .home_footer .social {
+    padding: 0px;
+    list-style: none; }
+    .home_footer .social li {
+      float: right; }
+      .home_footer .social li a {
+        color: #FFFFFF;
+        font-size: 40px;
+        margin-left: 20px;
+        line-height: 100px; }
+
+.modal .modal-dialog {
+  margin: 5vh auto;
+  background-color: #FFFFFF;
+  height: 90vh; }
+  .modal .modal-dialog .modal-content {
+    border: 0px; }
+  .modal .modal-dialog .recipe_modal {
+    background-image: url(http://www.knorr.com/Images/1020/1020-245958.jpg);
+    background-size: auto 100%;
+    background-position: right;
+    height: 90vh; }
+    .modal .modal-dialog .recipe_modal .left_box {
+      background-color: #FFFFFF;
+      height: 90vh;
+      padding: 0px; }
+      .modal .modal-dialog .recipe_modal .left_box .top_box {
+        background-color: #1B1627;
+        overflow: hidden;
+        color: #FFFFFF;
+        padding: 20px;
+        position: relative;
+        padding-bottom: 0px; }
+        .modal .modal-dialog .recipe_modal .left_box .top_box .close {
+          font-size: 20px;
+          margin-top: -12px;
+          margin-right: -9px;
+          color: #FFFFFF;
+          opacity: 1; }
+        .modal .modal-dialog .recipe_modal .left_box .top_box .title {
+          font-family: "Josefin Sans";
+          font-size: 24px; }
+        .modal .modal-dialog .recipe_modal .left_box .top_box .desp {
+          margin-top: 10px;
+          font-size: 12px; }
+        .modal .modal-dialog .recipe_modal .left_box .top_box .nav-tabs {
+          border-bottom: 0px;
+          margin-top: 20px; }
+          .modal .modal-dialog .recipe_modal .left_box .top_box .nav-tabs li a {
+            padding: 0px;
+            color: rgba(255, 255, 255, 0.6);
+            background-color: transparent;
+            border: 0px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            padding-bottom: 10px;
+            margin-left: 20px;
+            margin-right: 20px; }
+            .modal .modal-dialog .recipe_modal .left_box .top_box .nav-tabs li a:hover {
+              border-bottom: 3px solid rgba(3, 169, 244, 0.52); }
+          .modal .modal-dialog .recipe_modal .left_box .top_box .nav-tabs li.active a {
+            color: #FFFFFF;
+            border-bottom: 3px solid #03A9F4; }
+      .modal .modal-dialog .recipe_modal .left_box .tab-content {
+        position: relative; }
+        .modal .modal-dialog .recipe_modal .left_box .tab-content .like {
+          background-color: #03A9F4;
+          height: 50px;
+          width: 50px;
+          display: inline-block;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 20px;
+          line-height: 50px;
+          border-radius: 50%;
+          position: absolute;
+          top: -23px;
+          right: 30px; }
+        .modal .modal-dialog .recipe_modal .left_box .tab-content .tab-pane {
+          padding: 20px; }
+          .modal .modal-dialog .recipe_modal .left_box .tab-content .tab-pane ul {
+            padding: 0px;
+            padding-left: 20px;
+            list-style: none; }
+            .modal .modal-dialog .recipe_modal .left_box .tab-content .tab-pane ul li {
+              margin-bottom: 4px; }
+          .modal .modal-dialog .recipe_modal .left_box .tab-content .tab-pane ol li {
+            margin-bottom: 10px; }

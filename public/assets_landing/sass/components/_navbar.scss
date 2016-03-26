@@ -1,0 +1,39 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 Jan, 2016, 7:37:39 PM
+    Author     : Alivenow
+*/
+.skin-red-light
+{
+    .main-header
+    {
+        .logo
+        {
+            background-color: $pink-color;
+
+            &:hover
+                {
+                background-color: $pink-darker;
+            }
+        }
+        .navbar
+        {
+            background-color: $pink-color;
+
+
+            .sidebar-toggle:hover
+                {
+                background-color: $pink-darker;
+            }
+        }
+
+        li.user-header
+        {
+            background-color: $pink-darker;
+        }
+    }
+}

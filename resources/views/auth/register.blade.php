@@ -28,7 +28,7 @@
 
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Register</button>
-        <a href="{{ url('/') }}" class="btn btn-success">Login</a>
     </div>
+    <a href="{{ url('/auth/login') }}" class="text-center link">I already have a membership</a>
 </form>
 @stop

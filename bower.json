@@ -1,0 +1,30 @@
+{
+  "name": "savjilanding",
+  "authors": [
+    "Keshav Katwe <keshaveveryonesfriend@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "fullpage.js": "~2.7.6",
+    "font-awesome": "~4.5.0",
+    "Ionicons": "ionicons#~2.0.1",
+    "parallax.js": "~1.4.1",
+    "Waves": "waves#~0.7.4",
+    "awesome-bootstrap-checkbox": "https://github.com/flatlogic/awesome-bootstrap-checkbox",
+    "masonry": "^4.0.0",
+    "angular-masonry": "^0.15.0",
+    "angular-bootstrap": "^1.1.2"
+  }
+}

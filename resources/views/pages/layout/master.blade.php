@@ -22,6 +22,10 @@
         <link type="text/css" rel="stylesheet" href="{{ URL::asset('plugins/custom/style.css') }}"/>
         <link type="text/css" rel="stylesheet" href="{{ URL::asset('plugins/toastr/toastr.min.css') }}"/>
 
+        <link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{url('assets_landing/css/styles.css')}}"/>
+        <link rel="stylesheet" href="{{url('bower_components/Waves/dist/waves.min.css')}}"/>
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -41,7 +45,7 @@
             }
         </style>
     </head>
-    <body class="hold-transition skin-red sidebar-mini">
+    <body class="hold-transition skin-red-light sidebar-mini">
         <!-- Site wrapper -->
         <div class="wrapper">
 
@@ -64,7 +68,7 @@
                     </a>
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
-                            
+
                             <!-- Notifications: style can be found in dropdown.less -->
                             <li class="dropdown notifications-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -96,12 +100,12 @@
                                     <li class="footer"><a href="#">View all</a></li>
                                 </ul>
                             </li>
-                            
+
                             <!-- User Account: style can be found in dropdown.less -->
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <img src="{{ Auth::User()->userImage() }}" class="user-image" alt="User Image">
-                                    <span class="hidden-xs">Welcome : {{ Auth::user()->userName() }}</span>
+                                    <span class="hidden-xs">Hi {{ Auth::user()->userName() }}</span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
@@ -454,25 +458,32 @@
         <script type="text/javascript" src="{{ URL::asset('plugins/fastclick/fastclick.min.js') }}"></script>
         <!-- AdminLTE App -->
         <script type="text/javascript" src="{{ URL::asset('plugins/dist/js/app.min.js') }}"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script type="text/javascript" src="{{ URL::asset('plugins/dist/js/demo.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('plugins/jquery.validate/jquery.validate.min.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('plugins/jquery.validate/additional-methods.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('plugins/tagsinput/bootstrap-tagsinput.min.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('plugins/tagsinput/typeahead.bundle.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('plugins/jcrop/js/jquery.Jcrop.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('plugins/toastr/toastr.min.js') }}"></script>
+
+        <script src="{{url('bower_components/Waves/dist/waves.min.js')}}"></script>
+
+        <script>
+
+Waves.attach('.btn');
+Waves.attach('.recipe_image');
+Waves.init();
+        </script>
         <script type="text/javascript">
-$.ajaxSetup({
-    headers: {'X-CSRF-Token': $('meta[name=_token]').attr('content')}
-});
-var base_url = "{{ url() }}";
+            $.ajaxSetup({
+                headers: {'X-CSRF-Token': $('meta[name=_token]').attr('content')}
+            });
+            var base_url = "{{ url() }}";
         </script>
 
         <script type="text/javascript" src="{{ URL::asset('plugins/typeahead/bootstrap3-typeahead.min.js') }}" ></script>
         <script type="text/javascript" src="{{ URL::asset('plugins/custom/allInOne.js') }}"></script>
 
-        @yield('include_js');
+        @yield('include_js')
 
         <?php
         $success = Session::get('show_success');
@@ -484,5 +495,7 @@ var base_url = "{{ url() }}";
         <input type="hidden" id="show_error_hidden" value="<?php echo (isset($error)) ? $error : ""; ?>"  />
         <input type="hidden" id="show_warning_hidden" value="<?php echo (isset($warning)) ? $warning : ""; ?>"  />
         <input type="hidden" id="show_info_hidden" value="<?php echo (isset($info)) ? $info : ""; ?>"  />
+
+
     </body>
 </html>
