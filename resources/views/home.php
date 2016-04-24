@@ -36,12 +36,14 @@
             <div class="content">
                 <div class="header">
                     <div class="black text-center">
-                        <a class="btn btn-login" href="<?php echo url('auth/login') ?>"><i class="ion-ios-person-outline"></i> Login</a>
+                        <a class="btn btn-login" href="<?php echo url('auth/register') ?>"><i class="ion-person-add"></i> Register</a>
+                        <a class="btn btn-login" href="<?php echo url('auth/login') ?>"><i class="ion-key"></i> Login</a>
+						<div class="clearfix"></div>
                         <h1 class="white-header">SavjiKitchen</h1>
 
                         <div class="form-group search" ng-controller="searchController">
                             <input type="text" class="form-control" placeholder="What you want to cook?" ng-model="filter_data" ng-change="filter()" ng-focus="showFilter()" ng-blur="hideFilter()"/>
-                            <button class="btn btn-primary">Search</button>
+                            <button class="btn btn-primary"><i class="ion-ios-search"></i> Search</button>
 
                             <div class="filter" ng-show="search_recipes.length && listStatus">
                                 <ul>
@@ -93,7 +95,7 @@
                                     <img class="awatar" ng-src="<?php echo url('profiles/{{recipe.user.image}}'); ?>"/>
                                     <div class="name">
                                         <p>{{recipe.user.name}}</p>
-                                        <span>2 Hours ago</span>
+                                        <span ng-bind="convertToDate(recipe.created_at) | date:'medium'">{{recipe.created_at}}</span>
                                     </div>
 
                                     <div class="clearfix"></div>
@@ -135,7 +137,7 @@
         </section>
 
 
-
+		<!--
         <footer class="container-fluid home_footer">
             <div class="row">
                 <div class="col-md-6">
@@ -159,7 +161,49 @@
                     </ul>
                 </div>
             </div>
-        </footer>
+        </footer>-->
+		
+		<footer class="container-fluid home_footer"  style="color:#FFFFFF">
+			<div class="container-fluid" style="padding: 20px;">
+				<div class="col-md-4">
+					<h4>Interested?</h4>
+					<h6>Tell us a little more and we'll get in touch.</h6>
+					<h3><i class="fa fa-envelope"></i> info@savjikitchen.com</h3>
+				</div>
+				<div class="col-md-4">
+					<h4>about us</h4>
+					<div>SavjiKitchen is a cooking website</div>
+				</div>
+				<div class="col-md-4">
+					<h4>site map</h4>
+					<ul style="padding-left:0px;list-style:none">
+						<li><a href="#" style="color:#FFF">Home</a></li>
+						<li><a href="#" style="color:#FFF">About</a></li>
+						<li><a href="#" style="color:#FFF">Policy & Privacy</a></li>
+						<li><a href="#" style="color:#FFF">Terms & Condition</a></li>
+					</ul>
+					
+					<ul class="hidden-xs btn-float">
+						<li class="facebook">
+							<a href="https://www.facebook.com/Savjikitchen"><i class="fa fa-facebook"></i></a>
+						</li>
+						<li class="google">
+							<a href="#"><i class="fa fa-google"></i></a>
+						</li>
+						<li class="twitter">
+							<a href="#"><i class="fa fa-twitter"></i></a>
+						</li>
+						<li class="youtube">
+							<a href="#"><i class="fa fa-youtube"></i></a>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			<div class="row text-center footer-bar">
+					SavjiKitchen &copy; <?php echo date('Y'); ?>, Powered by Dynasofts
+			</div>
+		</footer>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -189,6 +233,7 @@
         <script src="scripts/controllers/recipesController.js"></script>
         <script src="scripts/controllers/searchesController.js"></script>
         <script src="scripts/app.js"></script>
+        <script src="plugins/adaptive-bg/jquery.adaptive-backgrounds.js"></script>
 
         <script>
         </script>
@@ -208,6 +253,10 @@
                 itemSelector: '.grid-item',
                 percentPosition: true
             })
+			
+			$(document).ready(function(){
+				$.adaptiveBackground.run()
+			});
         </script>
     </body>
 </html>

@@ -54,8 +54,16 @@ Route::group(['middleware' => ['auth']], function() {
     Route::any('/manage_recipe', [
         'as' => 'manage_recipe', 'uses' => 'Recipe@manageRecipe'
     ]);
+	
+	Route::any('/checkRecipe', [
+        'as' => 'checkRecipe', 'uses' => 'Recipe@checkRecipe'
+    ]);
 
-    Route::any('/my_recipe', [
+	Route::any('/processStatus', [
+        'as' => 'processStatus', 'uses' => 'Recipe@processStatus'
+    ]);
+	
+	Route::any('/my_recipe', [
         'as' => 'my_recipe', 'uses' => 'Recipe@myRecipe'
     ]);
 

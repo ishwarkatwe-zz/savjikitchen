@@ -31,7 +31,7 @@
     <div class="col-md-4">
         <div class="card">
             <div class="card-block">
-                <h4 class="card-title">{{ $recipe->name }}</h4>
+                <h4 class="card-title">{{ $recipe->recipeNameTrim(35) }}</h4>
                 <h6 class="card-subtitle text-muted">{{ $recipe->catagoryNames(80) }}</h6>
             </div>
             <a href="{{ url('view_recipe') }}/{{ $recipe->id }}"> 

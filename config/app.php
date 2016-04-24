@@ -13,7 +13,7 @@ return [
       |
      */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
     /*
       |--------------------------------------------------------------------------
       | Application URL
@@ -68,7 +68,7 @@ return [
       | will not be safe. Please do this before deploying an application!
       |
      */
-    'key' => env('APP_KEY', 'SomeRandomString'),
+    'key' => env('APP_KEY', 'xlhF31NeOlibJcoOW9tvZg7TkHcAZI3a'),
     'cipher' => 'AES-256-CBC',
     /*
       |--------------------------------------------------------------------------

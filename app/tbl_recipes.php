@@ -26,6 +26,12 @@ class tbl_recipes extends Model {
         }
         return $url;
     }
+	
+	public function addedOn() {
+		$dt = $this->created_at;
+		
+		return date('d-M-Y',strtotime($dt));
+	}
 
     public function catagoryNames($limit = NULL) {
         $category = array();
@@ -48,6 +54,11 @@ class tbl_recipes extends Model {
         }
     }
 
+	public function recipeNameTrim($limit = NULL) {
+		$string = ucfirst($this->name);
+        return str_limit($string, $limit, $end = '...');
+    }
+	
     public function ingredients() {
         return $this->hasMany('App\tbl_recipe_ingredients', 'recipe_id', 'id');
     }

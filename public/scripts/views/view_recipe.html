@@ -1,6 +1,15 @@
+<style>
+.btn-float{
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    line-height: 50px;
+    border-radius: 50%;
+}
+</style>
 <div class="recipe_modal" style="background-image: url(img/{{recipedata.image}})">
-    <div class="row">
-        <div class="col-md-offset-6 col-md-6 left_box">
+    <div class="">
+        <div class="col-md-offset-6 col-md-6 left_box" style="overflow:auto">
             <div class="top_box">
                 <a href="#" class="close" ng-click="cancel()"><span class="ion-close-round"></span></a>
                 <p class="title">{{recipedata.name}}</p>
@@ -23,7 +32,11 @@
             </div>
             <!-- Tab panes -->
             <div class="tab-content">
-                <a class="like"><i class="fa fa-thumbs-up"></i></a>
+				<ul class="hidden-xs btn-float btn-float-popup">
+					<li class="thumbs"><a href="view_recipe/{{recipedata.id}}"><i class="fa fa-thumbs-up"></i></a></li>
+					<li class="comments"><a href="view_recipe/{{recipedata.id}}"><i class="fa fa-comments"></i></a></li>
+					<li class="share"><a href="view_recipe/{{recipedata.id}}"><i class="fa fa-share"></i></a></li>
+				</ul>
                 <div role="tabpanel" class="tab-pane active" id="home">
                     <ul>
                         <li ng-repeat="ingredient in recipedata.ingredients">{{ingredient.quantity}} {{ingredient.measure.name}} {{ingredient.name}}</li>

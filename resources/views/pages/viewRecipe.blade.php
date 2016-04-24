@@ -73,12 +73,12 @@
                         <table class="table table-hover">
                             <tr>
                                 <th>Ingredient</th>
-                                <th class="text-center">Measure</th>
+                                <th>Measure</th>
                             </tr>
                             @foreach ($recipe->ingredients as $ing)
                             <tr>
                                 <td>{{ $ing->name }}</td>
-                                <td class="text-center">{{ $ing->quantity }} {{ $ing->measure->name }}</td>
+                                <td>{{ $ing->quantity }} {{ $ing->measure->name }}</td>
                             </tr>
                             @endforeach
                         </table>
@@ -123,8 +123,12 @@
                         <strong><i class="fa fa-pencil margin-r-5"></i> Social Network</strong>
                         <br>
                         <br>
+						@if(!empty($recipe->youtube_url))
                         <a href="{{ $recipe->youtube_url }}" class="btn btn-social-icon btn-google"><i class="fa fa-youtube"></i></a>
+						@endif
+						@if(!empty($recipe->links))
                         <a href="{{ $recipe->links }}" class="btn btn-social-icon btn-bitbucket"><i class="fa fa-link"></i></a>
+						@endif
                     </div><!-- /.box-body -->
                 </div>
 

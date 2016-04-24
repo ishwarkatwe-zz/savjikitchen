@@ -32,9 +32,14 @@ and open the template in the editor.
 
                 h1
                 {
-                    line-height: 100px;
                     font-family: 'Damion', cursive;
-                    font-size: 50px;
+
+                    @media (min-width: 992px){
+                        font-size: 50px;
+                    }
+                    @media (max-width: 640px){
+                        font-size: 35px;
+                    }
                 }
 
                 .search
@@ -182,10 +187,10 @@ and open the template in the editor.
         }
         .caption
         {
+            padding-bottom: 0px;
             .title
             {
-                font-size: 14px;
-                font-size: 20px;
+                font-size: 16px;
                 font-family: 'Josefin Sans', sans-serif;
             }
         }
@@ -200,6 +205,7 @@ and open the template in the editor.
                 border-radius: 50%;
                 float: left;
                 margin-left: 10px;
+                padding: 4px;
             }
 
             .name
@@ -209,7 +215,7 @@ and open the template in the editor.
                 {
                     font-family: 'Josefin Sans', sans-serif;
                     color: $pink-color;
-                    font-size: 20px;
+                    font-size: 16px;
                     margin-bottom: 0px;
 
                 }
@@ -223,11 +229,17 @@ and open the template in the editor.
 
             .likes
             {
-                float: right;
-                color: $pink-color;
-                font-size: 16px;
-                line-height: 50px;
+                color: #FFFFFF;
+                line-height: 40px;
                 margin-right: 10px;
+                background-color: $pink-color;
+                border-radius: 50%;
+                width: 40px;
+                text-align: center;
+                height: 40px;
+                position: absolute;
+                right: 10px;
+                top: 10px;
             }
         }
     }

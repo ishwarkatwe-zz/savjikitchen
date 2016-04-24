@@ -27,8 +27,9 @@
     </div>
 
     <div class="form-group">
-        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="submit" class="btn btn-primary"><i class="ion-person-add"></i> Register</button>
+		<a href="{{ url('/auth/login') }}" class="text-center link pull-right">I already have a membership</a>
     </div>
-    <a href="{{ url('/auth/login') }}" class="text-center link">I already have a membership</a>
+    
 </form>
 @stop

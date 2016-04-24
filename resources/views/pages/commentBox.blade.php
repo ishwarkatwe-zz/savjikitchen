@@ -25,7 +25,7 @@
             {{ $comment->comment }}
 
             @if ($comment->user->id == Auth::user()->id)
-            <a href="javascript:void(0)" data-toggle="tooltip" onclick="deleteCommnt({{ $comment->id }})" title="Delete this post" class="pull-right text-danger"><i class="fa fa-times"></i></a>
+            <a href="javascript:void(0)" data-toggle="tooltip" onclick="deleteCommnt({{ $comment->id }})" title="Delete this post" class="pull-right btn btn-danger btn-xs"><i class="fa fa-times"></i> Delete</a>
             @endif
         </div><!-- /.comment-text -->
     </div><!-- /.box-comment -->

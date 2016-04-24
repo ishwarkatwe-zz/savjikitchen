@@ -71,9 +71,13 @@ and open the template in the editor.
             padding-left: 15px;
             padding-right: 15px; } }
         .home .content .header .black h1 {
-          line-height: 100px;
-          font-family: 'Damion', cursive;
-          font-size: 50px; }
+          font-family: 'Damion', cursive; }
+          @media (min-width: 992px) {
+            .home .content .header .black h1 {
+              font-size: 50px; } }
+          @media (max-width: 640px) {
+            .home .content .header .black h1 {
+              font-size: 35px; } }
         .home .content .header .black .search {
           width: 50%;
           margin: auto;
@@ -150,33 +154,41 @@ and open the template in the editor.
         width: 100%; }
         .recipes .thumbnail .image .waves-effect img {
           width: 100%; }
-    .recipes .thumbnail .caption .title {
-      font-size: 14px;
-      font-size: 20px;
-      font-family: 'Josefin Sans', sans-serif; }
+    .recipes .thumbnail .caption {
+      padding-bottom: 0px; }
+      .recipes .thumbnail .caption .title {
+        font-size: 16px;
+        font-family: 'Josefin Sans', sans-serif; }
     .recipes .thumbnail .footer .awatar {
       height: 50px;
       width: 50px;
       border-radius: 50%;
       float: left;
-      margin-left: 10px; }
+      margin-left: 10px;
+      padding: 4px; }
     .recipes .thumbnail .footer .name {
       margin-left: 70px; }
       .recipes .thumbnail .footer .name p {
         font-family: 'Josefin Sans', sans-serif;
         color: #e63b4d;
-        font-size: 20px;
+        font-size: 16px;
         margin-bottom: 0px; }
       .recipes .thumbnail .footer .name span {
         color: #DDD;
         color: #A2A2A2;
         font-size: 12px; }
     .recipes .thumbnail .footer .likes {
-      float: right;
-      color: #e63b4d;
-      font-size: 16px;
-      line-height: 50px;
-      margin-right: 10px; }
+      color: #FFFFFF;
+      line-height: 40px;
+      margin-right: 10px;
+      background-color: #e63b4d;
+      border-radius: 50%;
+      width: 40px;
+      text-align: center;
+      height: 40px;
+      position: absolute;
+      right: 10px;
+      top: 10px; }
 
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -195,7 +207,7 @@ and open the template in the editor.
   background-color: #e63b4d;
   border-color: #e63b4d; }
   .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .btn-primary:active:hover {
-    background-color: #d31b2e;
+    background-color: #d31b2e !important;
     border-color: #e63b4d;
     outline: none; }
 
@@ -211,7 +223,6 @@ and open the template in the editor.
 .btn-login {
   background: transparent;
   color: #FFFFFF;
-  border-width: 2px;
   border-color: white;
   margin-top: 5px;
   margin-right: 15px;
@@ -222,6 +233,124 @@ and open the template in the editor.
     font-size: 20px; }
   .btn-login:hover {
     color: #FFFFFF; }
+  .btn-login:focus {
+    color: #FFFFFF; }
+
+.btn-social-circle {
+  list-style: none;
+  display: inline-flex;
+  float: right;
+  margin: 0px;
+  line-height: 8vh;
+  padding: 2px; }
+  .btn-social-circle li {
+    margin: 2px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%; }
+    .btn-social-circle li a {
+      font-size: 28px;
+      line-height: 40px; }
+  .btn-social-circle li.facebook:hover {
+    border: 1px solid #3b5998;
+    cursor: pointer;
+    background: #FFFFFF; }
+    .btn-social-circle li.facebook:hover a {
+      color: #3b5998; }
+  .btn-social-circle li.facebook {
+    background: #3b5998; }
+    .btn-social-circle li.facebook a {
+      color: #FFFFFF; }
+  .btn-social-circle li.google:hover {
+    border: 1px solid #dd4b39;
+    cursor: pointer;
+    background: #FFFFFF; }
+    .btn-social-circle li.google:hover a {
+      color: #dd4b39; }
+  .btn-social-circle li.google {
+    background: #dd4b39; }
+    .btn-social-circle li.google a {
+      color: #FFFFFF; }
+  .btn-social-circle li.twitter:hover {
+    border: 1px solid #55acee;
+    cursor: pointer;
+    background: #FFFFFF; }
+    .btn-social-circle li.twitter:hover a {
+      color: #55acee; }
+  .btn-social-circle li.twitter {
+    background: #55acee; }
+    .btn-social-circle li.twitter a {
+      color: #FFFFFF; }
+  .btn-social-circle li.linkedin:hover {
+    border: 1px solid #007bb5;
+    cursor: pointer;
+    background: #FFFFFF; }
+    .btn-social-circle li.linkedin:hover a {
+      color: #007bb5; }
+  .btn-social-circle li.linkedin {
+    background: #007bb5; }
+    .btn-social-circle li.linkedin a {
+      color: #FFFFFF; }
+  .btn-social-circle li.youtube:hover {
+    border: 1px solid #bb0000;
+    cursor: pointer;
+    background: #FFFFFF; }
+    .btn-social-circle li.youtube:hover a {
+      color: #bb0000; }
+  .btn-social-circle li.youtube {
+    background: #bb0000; }
+    .btn-social-circle li.youtube a {
+      color: #FFFFFF; }
+
+.btn-float {
+  list-style: none;
+  position: absolute;
+  top: -45px;
+  right: 30px; }
+  .btn-float li {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    display: inline-block;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer; }
+    .btn-float li a {
+      text-decoration: none;
+      color: #FFFFFF;
+      font-size: 20px; }
+  .btn-float .facebook {
+    background-color: #4c70ba; }
+  .btn-float .facebook:hover {
+    background-color: #3B5998; }
+  .btn-float .google {
+    background-color: #e47365; }
+  .btn-float .google:hover {
+    background-color: #dd4b39; }
+  .btn-float .twitter {
+    background-color: #83c3f3; }
+  .btn-float .twitter:hover {
+    background-color: #55ACEE; }
+  .btn-float .youtube {
+    background-color: #ee0000; }
+  .btn-float .youtube:hover {
+    background-color: #BB0000; }
+  .btn-float .thumbs {
+    background-color: #2ebcfc; }
+  .btn-float .thumbs:hover {
+    background-color: #03A9F4; }
+  .btn-float .comments {
+    background-color: #efb45c; }
+  .btn-float .comments:hover {
+    background-color: #EA9F2E; }
+  .btn-float .share {
+    background-color: #7c6df1; }
+  .btn-float .share:hover {
+    background-color: #523FEC; }
+
+.btn-float-popup {
+  top: -26px; }
 
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -234,6 +363,10 @@ and open the template in the editor.
 */
 .register-page .black {
   padding-top: 2%; }
+  .register-page .black .brand_name {
+    font-family: 'Damion', cursive;
+    font-size: 50px;
+    color: #FFFFFF; }
 
 .register-page .register-box {
   margin: 0px;
@@ -258,7 +391,7 @@ and open the template in the editor.
 */
 .black {
   background-color: rgba(0, 0, 0, 0.5);
-  min-height: 100vh;
+  min-height: 82vh;
   position: relative; }
 
 /*
@@ -307,6 +440,22 @@ and open the template in the editor.
 .skin-red-light .main-header li.user-header {
   background-color: #d31b2e; }
 
+.nav-bar {
+  line-height: 10vh;
+  background-color: #FFFFFF;
+  color: #E63B4D; }
+
+.nav-bar a, .nav-bar a:focus, .nav-bar a:active {
+  color: #E63B4D;
+  font-size: 16px;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.nav-bar a:hover {
+  color: #D02C3D;
+  font-size: 16px;
+  border-bottom: 1px solid #D02C3D; }
+
 .home_footer {
   background: #e63b4d;
   min-height: 100px;
@@ -339,6 +488,41 @@ and open the template in the editor.
         margin-left: 20px;
         line-height: 100px; }
 
+.footer-bar {
+  line-height: 50px;
+  background-color: #D02C3D; }
+
+.line-box {
+  list-style: none;
+  padding-left: 0px; }
+  .line-box li {
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    border: 2px dashed #FFFFFF;
+    line-height: 130px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    margin: 5px; }
+    .line-box li i {
+      font-size: 45px;
+      margin: 16px; }
+
+.faq {
+  text-align: left; }
+  @media (min-width: 992px) {
+    .faq {
+      padding-left: 155px; } }
+  @media (max-width: 640px) {
+    .faq {
+      padding-left: 15px; } }
+  .faq .head {
+    color: #FFFFFF;
+    font-size: 22px; }
+  .faq ul {
+    color: #FFFFFF;
+    font-size: 18px; }
+
 .modal .modal-dialog {
   margin: 5vh auto;
   background-color: #FFFFFF;
@@ -353,7 +537,8 @@ and open the template in the editor.
     .modal .modal-dialog .recipe_modal .left_box {
       background-color: #FFFFFF;
       height: 90vh;
-      padding: 0px; }
+      padding: 0px;
+      opacity: .8; }
       .modal .modal-dialog .recipe_modal .left_box .top_box {
         background-color: #1B1627;
         overflow: hidden;

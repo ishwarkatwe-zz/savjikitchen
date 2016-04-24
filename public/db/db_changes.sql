@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `access_level` VARCHAR(255) NOT NULL DEFAULT 'member' AFTER `remember_token`;

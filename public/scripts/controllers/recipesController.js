@@ -29,6 +29,12 @@ angular.module('recipesController', ['recipeService'])
                     });
 
                 };
+
+                $scope.convertToDate = function (stringDate) {
+                    var dateOut = new Date(stringDate);
+                    dateOut.setDate(dateOut.getDate() + 1);
+                    return dateOut;
+                };
             }])
         .controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, recipedata) {
             $scope.recipedata = recipedata;

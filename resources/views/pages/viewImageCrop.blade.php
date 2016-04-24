@@ -41,9 +41,9 @@
             else {
                 $('#cropBoxModal').Jcrop({
                     onSelect: updateCoords,
-                    setSelect: [250, 200, 50, 50],
+                    setSelect: [800, 600, 50, 50],
                     aspectRatio: 16 / 9,
-                    minSize: [300, 200],
+                    minSize: [800, 600],
                     boxWidth: 500,
                     boxHeight: 500
                 });

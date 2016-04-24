@@ -52,3 +52,47 @@
         }
     }
 }
+
+.footer-bar{
+    line-height: 50px;
+	background-color: #D02C3D;
+}
+
+.line-box{
+	list-style:none;
+	padding-left:0px;
+	li{
+		display:inline-block;
+		width: 130px;
+		height: 130px;
+		border: 2px dashed #FFFFFF;
+		line-height: 130px;
+		border-radius: 50%;
+		color: #FFFFFF;
+		margin:5px;
+		i{
+			font-size: 45px;
+			margin: 16px;
+		}
+	}
+}
+
+.faq{
+	text-align:left;
+	
+	
+	@media (min-width: 992px){
+		padding-left : 155px;
+	}
+	@media (max-width: 640px){
+		padding-left : 15px;
+	}
+	.head{
+		color: #FFFFFF;
+		font-size:22px;
+	}
+	ul{
+		color: #FFFFFF;
+		font-size:18px;
+	}
+}

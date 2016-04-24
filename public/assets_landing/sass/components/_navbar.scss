@@ -37,3 +37,21 @@ and open the template in the editor.
         }
     }
 }
+
+
+.nav-bar{
+	line-height: 10vh;
+	background-color: #FFFFFF;
+	color:#E63B4D;
+}
+.nav-bar a, .nav-bar a:focus, .nav-bar a:active{
+	color:#E63B4D;
+	font-size: 16px;
+	padding-right:15px;
+	padding-left:15px;
+}
+.nav-bar a:hover{
+	color:#D02C3D;
+	font-size: 16px;
+	border-bottom: 1px solid #D02C3D;
+}

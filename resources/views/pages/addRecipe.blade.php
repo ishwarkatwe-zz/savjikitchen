@@ -168,10 +168,10 @@
     </div>
     <div class="box-body">
         <input name="recipe_image" id="recipe_image"  type="file" onchange="loadFile(event)"/>
-        <input type="text" id="x" name="x" />
-        <input type="text" id="y" name="y" />
-        <input type="text" id="w" name="w" />
-        <input type="text" id="h" name="h" />
+        <input type="hidden" id="x" name="x" />
+        <input type="hidden" id="y" name="y" />
+        <input type="hidden" id="w" name="w" />
+        <input type="hidden" id="h" name="h" />
     </div>  
 
     <input type="hidden" id="ingredient_count" name="ingredient_count" value="0" />

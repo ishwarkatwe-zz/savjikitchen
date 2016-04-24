@@ -70,7 +70,7 @@ class Recipe extends Controller {
             $image_width = $request->w;
             $image_height = $request->h;
 
-            Image::make($image->getRealPath())->crop($image_width, $image_height, $image_x, $image_y)->resize(350, 200)->save($path);
+            Image::make($image->getRealPath())->crop($image_width, $image_height, $image_x, $image_y)->resize(800, 600)->save($path);
         }
 
         $recipe = new tbl_recipes;
@@ -205,8 +205,8 @@ class Recipe extends Controller {
         $searchFor = (!empty($_GET['keyword'])) ? $_GET['keyword'] : $request->searchFor;
 
         if (!empty($searchFor)) {
-            $count = tbl_recipes::where('name', 'LIKE', '%' . $searchFor . '%')->where('deleted', '=', '0')->count();
-            $recipes = tbl_recipes::where('name', 'LIKE', '%' . $searchFor . '%')->where('deleted', '=', '0')->paginate(9);
+            $count = tbl_recipes::where('name', 'LIKE', '%' . $searchFor . '%')->where('deleted', '=', '0')->where('active', '=', '1')->count();
+            $recipes = tbl_recipes::where('name', 'LIKE', '%' . $searchFor . '%')->where('deleted', '=', '0')->where('active', '=', '1')->paginate(9);
             $recipes->setPath('manage_recipe');
         } else {
             $recipes = array();
@@ -274,7 +274,11 @@ class Recipe extends Controller {
             $image_height = $request->h;
             $old_image = $request->old_image;
 
-            Image::make($image->getRealPath())->crop($image_width, $image_height, $image_x, $image_y)->resize(350, 200)->save($path);
+            Image::make($image->getRealPath())->crop($image_width, $image_height, $image_x, $image_y)->resize(800, null, function ($constraint) {
+    $constraint->aspectRatio();
+})->save($path);
+
+			
 
             File::delete($old_image);
         }
@@ -568,5 +572,32 @@ class Recipe extends Controller {
             }
         }
     }
+	
+	public function checkRecipe(Request $request){
+		$recipes = tbl_recipes::all();
+		$data = array(
+			'recipes' => $recipes
+		);
+		
+        return view('pages/checkRecipe', $data);
+	}
+	
+	public function processStatus(Request $request){
+		$intRecipeId = $request->intRecipeId;
+		$intStatus = $request->intStatus;
+		
+		$activity = tbl_activities::where('recipe_id', '=',$intRecipeId )->get();
+		
+		tbl_activities::where('recipe_id', $intRecipeId)->update(['active' => $intStatus]);
+		  
+		
+		$recipe = tbl_recipes::find($intRecipeId);
+		$recipe->active = $intStatus;
+		echo $recipe->save();
+		
+		
+		
+	}
+	
 
 }

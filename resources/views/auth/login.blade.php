@@ -23,9 +23,9 @@
         </label>
     </div>
 
-    <div>
-        <button type="submit" class="btn btn-primary">Login</button>
-        <a href="{{ url('auth/register') }}" class="btn btn-default">Register</a>
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary"><i class="ion-key"></i> Login</button>
+        <a href="{{ url('auth/register') }}" class="btn btn-default"><i class="ion-person-add"></i> Register</a>
     </div>
 </form>
 @stop
