@@ -4,13 +4,17 @@ angular.module('recipesController', ['recipeService'])
                 $scope.sort = 'popular';
 
 
-                Recipe.getRecipes()
+                Recipe.getRecipes("sortby=popular")
                         .success(function (data) {
                             $scope.recipes = data;
                         });
 
                 $scope.changeSortOrder = function (sort) {
                     $scope.sort = sort;
+                    Recipe.getRecipes("sortby=" + sort)
+                            .success(function (data) {
+                                $scope.recipes = data;
+                            });
                 };
 
 

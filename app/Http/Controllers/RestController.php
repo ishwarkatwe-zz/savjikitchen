@@ -15,7 +15,21 @@ use Illuminate\Support\Facades\Input;
 class RestController extends Controller {
 
     public function getRecipes() {
-        $recipes = tbl_recipes::with('user', 'category', 'like_count', 'time', 'ingredients', 'ingredients.measure', 'instructions')->where('active','=',1)->get();
+        $sortby = Input::get('sortby');
+
+        if ($sortby == "popular") {
+            $recipes = tbl_recipes::with('user', 'category', 'like_count', 'time', 'ingredients', 'ingredients.measure', 'instructions')
+                    ->where('active', '=', 1)
+                    ->orderBy('created_at', 'asc')
+                    ->get();
+        } else {
+            $recipes = tbl_recipes::with('user', 'category', 'like_count', 'time', 'ingredients', 'ingredients.measure', 'instructions')
+                    ->where('active', '=', 1)
+                    ->orderBy('created_at', 'desc')
+                    ->get();
+        }
+
+
         return response()->json($recipes);
     }
 

@@ -53,7 +53,7 @@ use AuthenticatesAndRegistersUsers;
      *
      * @return Response
      */
-    public function redirectToProvider() {
+    public function redirectToFacebookProvider() {
         return Socialite::driver('facebook')->redirect();
     }
 
@@ -62,11 +62,41 @@ use AuthenticatesAndRegistersUsers;
      *
      * @return Response
      */
-    public function handleProviderCallback() {
+    public function handleFacebookProviderCallback() {
+        $facebook_user = Socialite::with('facebook')->user();
+        $result = $this->socialLogin($facebook_user);
+        if ($result)
+            return redirect('profile');
+    }
 
-        $user = Socialite::with('facebook')->user();
+    public function redirectToGoogleProvider() {
+        return Socialite::driver('google')->redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return Response
+     */
+    public function handleGoogleProviderCallback() {
+
+        $user = Socialite::with('google')->user();
         var_dump($user);
         // $user->token;
+    }
+
+    public function socialLogin($social_user) {
+        $user = User::where('email', $social_user->email)->first();
+        if (empty($user)) {
+            $newUser = new User;
+            $newUser->name = $social_user->name;
+            $newUser->email = $social_user->email;
+            $newUser->save();
+            auth()->login($newUser);
+        } else {
+            auth()->login($user);
+        }
+        return TRUE;
     }
 
     /**

@@ -38,7 +38,7 @@
                     <div class="black text-center">
                         <a class="btn btn-login" href="<?php echo url('auth/register') ?>"><i class="ion-person-add"></i> Register</a>
                         <a class="btn btn-login" href="<?php echo url('auth/login') ?>"><i class="ion-key"></i> Login</a>
-						<div class="clearfix"></div>
+                        <div class="clearfix"></div>
                         <h1 class="white-header">SavjiKitchen</h1>
 
                         <div class="form-group search" ng-controller="searchController">
@@ -67,9 +67,9 @@
                 <!--785475-->
                 <div class="container-fluid recipes" ng-controller="recipeController">
                     <div class="text-right">
-                        
+
                         <div class="btn-group" role="group" aria-label="...">
-                            
+
                             <button class="btn " ng-class="(sort == 'popular') ? 'btn-primary' : 'btn-default'" ng-click="changeSortOrder('popular')">Popular</button>
                             <button class="btn " ng-class="(sort == 'recent') ? 'btn-primary' : 'btn-default'" ng-click="changeSortOrder('recent')">Recent</button>
                         </div>
@@ -137,73 +137,73 @@
         </section>
 
 
-		<!--
-        <footer class="container-fluid home_footer">
-            <div class="row">
-                <div class="col-md-6">
-                    <ul class="menu">
-                        <li><a>Home</a></li>
-                        <li><a>Recipes</a></li>
-                        <li><a>Privacy policy</a></li>
-                        <li><a>Terms and condition</a></li>
+        <!--
+<footer class="container-fluid home_footer">
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="menu">
+                <li><a>Home</a></li>
+                <li><a>Recipes</a></li>
+                <li><a>Privacy policy</a></li>
+                <li><a>Terms and condition</a></li>
 
-                    </ul>
-                    <div class="clearfix"></div>
-                    <p>
-                        Copyright © 2016 <strong>SavjiKitchen</strong>. All rights reserved.
-                    </p>
+            </ul>
+            <div class="clearfix"></div>
+            <p>
+                Copyright © 2016 <strong>SavjiKitchen</strong>. All rights reserved.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <ul class="social">
+                <li><a><i class="fa fa-facebook"></i></a></li> 
+                <li><a><i class="fa fa-twitter"></i></a></li> 
+                <li><a><i class="fa fa-youtube"></i></a></li> 
+            </ul>
+        </div>
+    </div>
+</footer>-->
+
+        <footer class="container-fluid home_footer"  style="color:#FFFFFF">
+            <div class="container-fluid" style="padding: 20px;">
+                <div class="col-md-4">
+                    <h4>Interested?</h4>
+                    <h6>Tell us a little more and we'll get in touch.</h6>
+                    <h3><i class="fa fa-envelope"></i> info@savjikitchen.com</h3>
                 </div>
-                <div class="col-md-6">
-                    <ul class="social">
-                        <li><a><i class="fa fa-facebook"></i></a></li> 
-                        <li><a><i class="fa fa-twitter"></i></a></li> 
-                        <li><a><i class="fa fa-youtube"></i></a></li> 
+                <div class="col-md-4">
+                    <h4>about us</h4>
+                    <div>SavjiKitchen is a cooking website</div>
+                </div>
+                <div class="col-md-4">
+                    <h4>site map</h4>
+                    <ul style="padding-left:0px;list-style:none">
+                        <li><a href="#" style="color:#FFF">Home</a></li>
+                        <li><a href="#" style="color:#FFF">About</a></li>
+                        <li><a href="#" style="color:#FFF">Policy & Privacy</a></li>
+                        <li><a href="#" style="color:#FFF">Terms & Condition</a></li>
+                    </ul>
+
+                    <ul class="hidden-xs btn-float">
+                        <li class="facebook">
+                            <a href="https://www.facebook.com/Savjikitchen"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class="google">
+                            <a href="#"><i class="fa fa-google"></i></a>
+                        </li>
+                        <li class="twitter">
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="youtube">
+                            <a href="#"><i class="fa fa-youtube"></i></a>
+                        </li>
                     </ul>
                 </div>
+
             </div>
-        </footer>-->
-		
-		<footer class="container-fluid home_footer"  style="color:#FFFFFF">
-			<div class="container-fluid" style="padding: 20px;">
-				<div class="col-md-4">
-					<h4>Interested?</h4>
-					<h6>Tell us a little more and we'll get in touch.</h6>
-					<h3><i class="fa fa-envelope"></i> info@savjikitchen.com</h3>
-				</div>
-				<div class="col-md-4">
-					<h4>about us</h4>
-					<div>SavjiKitchen is a cooking website</div>
-				</div>
-				<div class="col-md-4">
-					<h4>site map</h4>
-					<ul style="padding-left:0px;list-style:none">
-						<li><a href="#" style="color:#FFF">Home</a></li>
-						<li><a href="#" style="color:#FFF">About</a></li>
-						<li><a href="#" style="color:#FFF">Policy & Privacy</a></li>
-						<li><a href="#" style="color:#FFF">Terms & Condition</a></li>
-					</ul>
-					
-					<ul class="hidden-xs btn-float">
-						<li class="facebook">
-							<a href="https://www.facebook.com/Savjikitchen"><i class="fa fa-facebook"></i></a>
-						</li>
-						<li class="google">
-							<a href="#"><i class="fa fa-google"></i></a>
-						</li>
-						<li class="twitter">
-							<a href="#"><i class="fa fa-twitter"></i></a>
-						</li>
-						<li class="youtube">
-							<a href="#"><i class="fa fa-youtube"></i></a>
-						</li>
-					</ul>
-				</div>
-				
-			</div>
-			<div class="row text-center footer-bar">
-					SavjiKitchen &copy; <?php echo date('Y'); ?>, Powered by Dynasofts
-			</div>
-		</footer>
+            <div class="row text-center footer-bar">
+                SavjiKitchen &copy; <?php echo date('Y'); ?>, Powered by Dynasofts
+            </div>
+        </footer>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -253,10 +253,10 @@
                 itemSelector: '.grid-item',
                 percentPosition: true
             })
-			
-			$(document).ready(function(){
-				$.adaptiveBackground.run()
-			});
+
+            $(document).ready(function () {
+                $.adaptiveBackground.run()
+            });
         </script>
     </body>
 </html>
