@@ -203,7 +203,53 @@
             <div class="row text-center footer-bar">
                 SavjiKitchen &copy; <?php echo date('Y'); ?>, Powered by Dynasofts
             </div>
+<<<<<<< HEAD
+        </footer>-->
+		
+		<footer class="container-fluid home_footer"  style="color:#FFFFFF">
+			<div class="container-fluid" style="padding: 20px;">
+				<div class="col-md-4">
+					<h4>Interested?</h4>
+					<h6>Tell us a little more and we'll get in touch.</h6>
+					<h3><i class="fa fa-envelope"></i> info@savjikitchen.com</h3>
+				</div>
+				<div class="col-md-4">
+					<h4>about us</h4>
+					<div>Savji community is known for its hot and spicy non-vegetarian delicacies and Savji masala in places where Savjis are concentrated in large numbers. Majority of the Savji people are non-vegetarian and hence preparation of variety of meat dishes is very common in the community.  <a href="/about" class="text-white"> Read more</a></div>
+				</div>
+				<div class="col-md-4">
+					<h4>site map</h4>
+					<ul style="padding-left:0px;list-style:none">
+						<li><a href="/index.php" style="color:#FFF">Home</a></li>
+						<li><a href="/about" style="color:#FFF">About</a></li>
+						<li><a href="/auth/login" style="color:#FFF">Login</a></li>
+						<li><a href="/auth/register" style="color:#FFF">Register</a></li>
+					</ul>
+					
+					<ul class="hidden-xs btn-float">
+						<li class="facebook">
+							<a href="https://www.facebook.com/Savjikitchen"><i class="fa fa-facebook"></i></a>
+						</li>
+						<li class="google">
+							<a href="#"><i class="fa fa-google"></i></a>
+						</li>
+						<li class="twitter">
+							<a href="#"><i class="fa fa-twitter"></i></a>
+						</li>
+						<li class="youtube">
+							<a href="#"><i class="fa fa-youtube"></i></a>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			<div class="row text-center footer-bar">
+					SavjiKitchen &copy; <?php echo date('Y'); ?>, Powered by Dynasofts
+			</div>
+		</footer>
+=======
         </footer>
+>>>>>>> ed5a2301da19cda8a5f31bff4927fd2b53fc76fa
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
