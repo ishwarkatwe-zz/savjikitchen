@@ -52,7 +52,21 @@
                             @section('content')
 
                             @show
+<<<<<<< HEAD
                            
+=======
+                            <div class="social-auth-links text-center">
+                                <p>- OR -</p>
+                                <a href="{{ url('/auth/facebook') }}" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign up using Facebook</a>
+                                <a href="{{ url('/auth/google') }}" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign up using Google+</a>
+                            </div>
+
+
+                        </div><!-- /.form-box -->
+                    </div><!-- /.register-box -->
+                </div>
+            </div>
+>>>>>>> ed5a2301da19cda8a5f31bff4927fd2b53fc76fa
 <br>
 <br>
         </div>

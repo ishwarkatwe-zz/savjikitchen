@@ -4,8 +4,8 @@ angular.module('recipeService', [])
         // each function returns a promise object 
         .factory('Recipe', function ($http) {
             return {
-                getRecipes: function () {
-                    return $http.get(base_url('rest/recipes'));
+                getRecipes: function (param) {
+                    return $http.get(base_url('rest/recipes?'+param));
                 },
                 getFilterRecipes: function (filter) {
                     return $http.get(base_url('rest/filter?filter=' + filter));

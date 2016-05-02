@@ -19,8 +19,12 @@ Route::get('/', function () {
 Route::controller('rest', 'RestController');
 
 
-Route::get('auth/google', 'Auth\AuthController@redirectToProvider');
-Route::get('auth/google/callback', 'Auth\AuthController@handleProviderCallback');
+Route::get('auth/google', 'Auth\AuthController@redirectToGoogleProvider');
+Route::get('auth/google/callback', 'Auth\AuthController@handleGoogleProviderCallback');
+
+
+Route::get('auth/facebook', 'Auth\AuthController@redirectToFacebookProvider');
+Route::get('auth/facebook/callback', 'Auth\AuthController@handleFacebookProviderCallback');
 
 //Route::get('/', 'Auth\AuthController@getLogin');
 // Authentication routes...
@@ -59,16 +63,16 @@ Route::group(['middleware' => ['auth']], function() {
     Route::any('/manage_recipe', [
         'as' => 'manage_recipe', 'uses' => 'Recipe@manageRecipe'
     ]);
-	
-	Route::any('/checkRecipe', [
+
+    Route::any('/checkRecipe', [
         'as' => 'checkRecipe', 'uses' => 'Recipe@checkRecipe'
     ]);
 
-	Route::any('/processStatus', [
+    Route::any('/processStatus', [
         'as' => 'processStatus', 'uses' => 'Recipe@processStatus'
     ]);
-	
-	Route::any('/my_recipe', [
+
+    Route::any('/my_recipe', [
         'as' => 'my_recipe', 'uses' => 'Recipe@myRecipe'
     ]);
 
