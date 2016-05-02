@@ -163,49 +163,7 @@
     </div>
 </footer>-->
 
-        <footer class="container-fluid home_footer"  style="color:#FFFFFF">
-            <div class="container-fluid" style="padding: 20px;">
-                <div class="col-md-4">
-                    <h4>Interested?</h4>
-                    <h6>Tell us a little more and we'll get in touch.</h6>
-                    <h3><i class="fa fa-envelope"></i> info@savjikitchen.com</h3>
-                </div>
-                <div class="col-md-4">
-                    <h4>about us</h4>
-                    <div>SavjiKitchen is a cooking website</div>
-                </div>
-                <div class="col-md-4">
-                    <h4>site map</h4>
-                    <ul style="padding-left:0px;list-style:none">
-                        <li><a href="#" style="color:#FFF">Home</a></li>
-                        <li><a href="#" style="color:#FFF">About</a></li>
-                        <li><a href="#" style="color:#FFF">Policy & Privacy</a></li>
-                        <li><a href="#" style="color:#FFF">Terms & Condition</a></li>
-                    </ul>
-
-                    <ul class="hidden-xs btn-float">
-                        <li class="facebook">
-                            <a href="https://www.facebook.com/Savjikitchen"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li class="google">
-                            <a href="#"><i class="fa fa-google"></i></a>
-                        </li>
-                        <li class="twitter">
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li class="youtube">
-                            <a href="#"><i class="fa fa-youtube"></i></a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="row text-center footer-bar">
-                SavjiKitchen &copy; <?php echo date('Y'); ?>, Powered by Dynasofts
-            </div>
-<<<<<<< HEAD
-        </footer>-->
-		
+      
 		<footer class="container-fluid home_footer"  style="color:#FFFFFF">
 			<div class="container-fluid" style="padding: 20px;">
 				<div class="col-md-4">
@@ -228,16 +186,16 @@
 					
 					<ul class="hidden-xs btn-float">
 						<li class="facebook">
-							<a href="https://www.facebook.com/Savjikitchen"><i class="fa fa-facebook"></i></a>
+							<a href="https://www.facebook.com/Savjikitchen/" target="_black"><i class="fa fa-facebook"></i></a>
 						</li>
 						<li class="google">
-							<a href="#"><i class="fa fa-google"></i></a>
+							<a href="https://plus.google.com/103682649455187926306" target="_blank"><i class="fa fa-google"></i></a>
 						</li>
 						<li class="twitter">
-							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="https://twitter.com/savjikitchen" target="_blank"><i class="fa fa-twitter"></i></a>
 						</li>
 						<li class="youtube">
-							<a href="#"><i class="fa fa-youtube"></i></a>
+							<a href="https://www.youtube.com/channel/UCw0CIGjw96q1yKnHysKZ1NA" target="_blank"><i class="fa fa-youtube"></i></a>
 						</li>
 					</ul>
 				</div>
@@ -247,9 +205,6 @@
 					SavjiKitchen &copy; <?php echo date('Y'); ?>, Powered by Dynasofts
 			</div>
 		</footer>
-=======
-        </footer>
->>>>>>> ed5a2301da19cda8a5f31bff4927fd2b53fc76fa
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="bower_components/jquery/dist/jquery.min.js"></script>

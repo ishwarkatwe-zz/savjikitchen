@@ -52,21 +52,6 @@
                             @section('content')
 
                             @show
-<<<<<<< HEAD
-                           
-=======
-                            <div class="social-auth-links text-center">
-                                <p>- OR -</p>
-                                <a href="{{ url('/auth/facebook') }}" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign up using Facebook</a>
-                                <a href="{{ url('/auth/google') }}" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign up using Google+</a>
-                            </div>
-
-
-                        </div><!-- /.form-box -->
-                    </div><!-- /.register-box -->
-                </div>
-            </div>
->>>>>>> ed5a2301da19cda8a5f31bff4927fd2b53fc76fa
 <br>
 <br>
         </div>
@@ -93,16 +78,16 @@
 					
 					<ul class="hidden-xs btn-float">
 						<li class="facebook">
-							<a href="https://www.facebook.com/Savjikitchen/"><i class="fa fa-facebook"></i></a>
+							<a href="https://www.facebook.com/Savjikitchen/" target="_black"><i class="fa fa-facebook"></i></a>
 						</li>
 						<li class="google">
-							<a href="#"><i class="fa fa-google"></i></a>
+							<a href="https://plus.google.com/103682649455187926306" target="_blank"><i class="fa fa-google"></i></a>
 						</li>
 						<li class="twitter">
-							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="https://twitter.com/savjikitchen" target="_blank"><i class="fa fa-twitter"></i></a>
 						</li>
 						<li class="youtube">
-							<a href="#"><i class="fa fa-youtube"></i></a>
+							<a href="https://www.youtube.com/channel/UCw0CIGjw96q1yKnHysKZ1NA" target="_blank"><i class="fa fa-youtube"></i></a>
 						</li>
 					</ul>
 				</div>
