@@ -81,8 +81,9 @@ use AuthenticatesAndRegistersUsers;
     public function handleGoogleProviderCallback() {
 
         $user = Socialite::with('google')->user();
-        var_dump($user);
-        // $user->token;
+        $result = $this->socialLogin($user);
+        if ($result)
+            return redirect('profile');
     }
 
     public function socialLogin($social_user) {
