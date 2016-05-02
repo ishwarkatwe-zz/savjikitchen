@@ -34,7 +34,7 @@ return [
     'google' => [
         'client_id' => '865274412604-2ee5aqhpukr6ah70cukij0qr8ct6mm3c.apps.googleusercontent.com',
         'client_secret' => 'VzbjIAMw-Ibb1H_XYeWcqNdD',
-        'redirect' => 'http://savjikitchen.com/auth/google/callback',
+        'redirect' => 'http://' . $_SERVER['HTTP_HOST'] . '/auth/google/callback',
     ],
     'facebook' => [
         'client_id' => '615163921928294',
