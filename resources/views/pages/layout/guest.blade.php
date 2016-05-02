@@ -43,57 +43,16 @@
     <body class="hold-transition register-page" style="background-image: url({{url('assets_landing/images/3.jpg')}})">
         <div class="row nav-bar text-center">
             <a href="{{ url('/') }}" class="btn"><i class="fa fa-home"></i> Home</a> | 
-            <a href="#" class="btn"><i class="fa fa-info"></i> About</a> | 
-            <a href="#" class="btn"><i class="fa fa-phone"></i> Contact</a>
+            <a href="{{ url('/about') }}" class="btn"><i class="fa fa-info"></i> About</a> | 
+            <a href="{{ url('/contact') }}" class="btn"><i class="fa fa-phone"></i> Contact</a>
         </div>
         <div class="black">
-            <div class="row">
-                <div class="col-md-7 text-center">
-                    <h1 class="brand_name">SavjiKitchen</h1>		
-					<br>
-					<div class="faq">
-						<p class="head">What is SavjiKitchen?</p>
-						<ul>
-							<li>Free Learning platform for food lovers.</li>
-							<li>Savji food is a art of taste from most south Indian.</li>
-							<li>A spot to highlight your cooking skills.</li>
-							<li>We connect food lovers.</li>
-						</ul>
-					</div>
-					<br>
-					<ul class="line-box">
-						<li>
-							<i class="fa fa-star"> <h4>Learn Recipes</h4></i>
-						</li>
-						<li>
-							<i class="fa fa-refresh"> <h4>Inspire Yourself</h4></i>
-						</li>	
-						<li>
-							<i class="fa fa-share"> <h4>Share a Friend</h4></i>
-						</li>
-					</ul>
-					
-					
-                </div>
-                <div class="col-md-5">
-                    <div class="register-box">
-
-                        <div class="register-box-body">
+            
 
                             @section('content')
 
                             @show
-                            <div class="social-auth-links text-center">
-                                <p>- OR -</p>
-                                <a href="{{ url('/auth/login') }}" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign up using Facebook</a>
-                                <a href="{{ url('/auth/google') }}" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign up using Google+</a>
-                            </div>
-
-
-                        </div><!-- /.form-box -->
-                    </div><!-- /.register-box -->
-                </div>
-            </div>
+                           
 <br>
 <br>
         </div>
@@ -112,10 +71,10 @@
 				<div class="col-md-4">
 					<h4>site map</h4>
 					<ul style="padding-left:0px;list-style:none">
-						<li><a href="#" style="color:#FFF">Home</a></li>
-						<li><a href="#" style="color:#FFF">About</a></li>
-						<li><a href="#" style="color:#FFF">Policy & Privacy</a></li>
-						<li><a href="#" style="color:#FFF">Terms & Condition</a></li>
+						<li><a href="{{ url('/') }}" style="color:#FFF">Home</a></li>
+						<li><a href="{{ url('/about') }}" style="color:#FFF">About</a></li>
+						<li><a href="{{ url('/auth/login') }}" style="color:#FFF">Login</a></li>
+						<li><a href="{{ url('/auth/register') }}" style="color:#FFF">Register</a></li>
 					</ul>
 					
 					<ul class="hidden-xs btn-float">
@@ -150,6 +109,9 @@
         <script type="text/javascript" src="{{ URL::asset('plugins/fastclick/fastclick.min.js') }}"></script>
         <!-- AdminLTE App -->
         <script type="text/javascript" src="{{ URL::asset('plugins/dist/js/app.min.js') }}"></script>
+		
+		 <script type="text/javascript" src="{{ URL::asset('plugins/jquery.validate/jquery.validate.min.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('plugins/jquery.validate/additional-methods.js') }}"></script>
 
         <script src="{{url('bower_components/Waves/dist/waves.min.js')}}"></script>
 
@@ -158,6 +120,40 @@
 Waves.attach('.btn');
 Waves.attach('.recipe_image');
 Waves.init();
+
+
+		$(document).ready(function () {
+			$('#frmReview').validate({
+				rules: {
+					name: "required",
+					email: {
+						email: true
+					},
+					rating: "required",
+					feedback: "required",
+					contact:  {
+						required: true,
+						number: true
+					}
+				},
+				messages: {
+					name: "Please enter user name",
+					email: {
+						email: "Please provide valid email"
+					},
+					rating: "Please choose rating",
+					feedback: "Please provide your feedback",
+					contact:  {
+						required: "Please enter contact number",
+						number: "Please enter valid contact number"
+					}
+				},
+				submitHandler: function (form) {
+					form.submit();
+					return false;
+				}
+			});
+		});
         </script>
     </body>
 </html>

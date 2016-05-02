@@ -12,19 +12,23 @@
         }
         .recipe_modal
         {
-            background-image: url(http://www.knorr.com/Images/1020/1020-245958.jpg);
-            background-size: auto 100%;
-            background-position: right;
+            background-size: cover;
+            background-position: center;
+			background-repeat:no-repeat;
+			
+			
             height: 90vh;
 
+			.left_box:hover{
+				
+			}
 
             .left_box
             {
-                background-color: #FFFFFF;
+                background-color: rgba(255, 255, 255, 0.7);
                 height: 90vh;
                 padding: 0px;
-				opacity:.8;
-
+				
                 .top_box
                 {
                     background-color: #1B1627;

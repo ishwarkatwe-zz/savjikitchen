@@ -376,9 +376,37 @@ and open the template in the editor.
     .register-page .register-box .register-logo a {
       color: #FFFFFF; }
   .register-page .register-box .register-box-body {
-    background-color: rgba(255, 255, 255, 0.78); }
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #FFFFFF; }
     .register-page .register-box .register-box-body .link {
       color: #e63b4d; }
+
+.contact-box {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF; }
+
+.text-white-desc {
+  color: #FFFFFF;
+  line-height: 25px;
+  text-align: justify;
+  font-size: 16px; }
+
+label.error {
+  position: absolute;
+  font-size: 13px;
+  bottom: -27px;
+  color: #FF1F37; }
+
+.text-white {
+  color: #FFFFFF;
+  text-decoration: none; }
+
+.text-white:hover, .text-white:focus {
+  color: #FFFFFF;
+  text-decoration: underline;
+  -moz-text-decoration-color: #FFFFFF;
+  /* Code for Firefox */
+  text-decoration-color: #FFFFFF; }
 
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -530,15 +558,14 @@ and open the template in the editor.
   .modal .modal-dialog .modal-content {
     border: 0px; }
   .modal .modal-dialog .recipe_modal {
-    background-image: url(http://www.knorr.com/Images/1020/1020-245958.jpg);
-    background-size: auto 100%;
-    background-position: right;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 90vh; }
     .modal .modal-dialog .recipe_modal .left_box {
-      background-color: #FFFFFF;
+      background-color: rgba(255, 255, 255, 0.7);
       height: 90vh;
-      padding: 0px;
-      opacity: .8; }
+      padding: 0px; }
       .modal .modal-dialog .recipe_modal .left_box .top_box {
         background-color: #1B1627;
         overflow: hidden;
