@@ -4,7 +4,7 @@
 @section('content')
 @parent
 <div class="container">
-	<div class="col-md-10 text-white-desc contact-box">
+	<div class="col-md-10 text-white-desc">
 		<h2>About</h2>
 		    <p class="desp">Savji community is known for its hot and spicy non-vegetarian delicacies and Savji masala in places where Savjis are concentrated in large numbers. Majority of the Savji people are non-vegetarian and hence preparation of variety of meat dishes is very common in the community. Goat meat, chicken and fish forms major component of Savji cuisine along with other vegetarian dishes. Alcohol consumption is not restricted in the community. Some of the common recipes include edmi (puris made of wheat flour, gram flour, chilies and other spices), khaimo or kheema (minced goat meat), shakanu chaknu (goat and chicken curry) prepared in special Savji spices.
 

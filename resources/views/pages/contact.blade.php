@@ -4,7 +4,7 @@
 @section('content')
 @parent
 <div class="container">
-	<div class="col-md-7 text-white-desc contact-box">
+	<div class="col-md-7 text-white-desc">
 		<h2>Write to Us / Feedback</h2>
 		<p>Thank you for choosing to send us your valuable feedback.</p>
 		<p>You are encouraged to use the online feedback form below to send us your valuable comments and suggesstions as well as any queries about our products and services that you may have. You may also email your queries / feedback / suggestions. All feedback received are fully responded in a timely manner. Your patience in getting our reply is most appreciated. We look forward to your feedback today.</p>
@@ -53,7 +53,7 @@
 			</div>
 		@endif
 	</div>
-	<div class="col-md-4 col-md-offset-1 text-white-desc contact-box">
+	<div class="col-md-4 col-md-offset-1 text-white-desc">
 		<h2>Contact Us</h2>
 		<h5>Tell us a little more and we'll get in touch.</h5>
 		

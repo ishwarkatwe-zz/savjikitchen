@@ -65,7 +65,7 @@
 				</div>
 				<div class="col-md-4">
 					<h4>about us</h4>
-					<div>SavjiKitchen is a cooking website</div>
+					<div>Savji community is known for its hot and spicy non-vegetarian delicacies and Savji masala in places where Savjis are concentrated in large numbers. Majority of the Savji people are non-vegetarian and hence preparation of variety of meat dishes is very common in the community.  <a href="/about" class="text-white"> Read more</a></div>
 				</div>
 				<div class="col-md-4">
 					<h4>site map</h4>

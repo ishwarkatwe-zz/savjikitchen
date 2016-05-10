@@ -376,13 +376,13 @@ and open the template in the editor.
     .register-page .register-box .register-logo a {
       color: #FFFFFF; }
   .register-page .register-box .register-box-body {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.5);
     color: #FFFFFF; }
     .register-page .register-box .register-box-body .link {
       color: #e63b4d; }
 
 .contact-box {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.5);
   color: #FFFFFF; }
 
 .text-white-desc {
