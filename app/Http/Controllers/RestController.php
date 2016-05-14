@@ -18,12 +18,12 @@ class RestController extends Controller {
         $sortby = Input::get('sortby');
 
         if ($sortby == "popular") {
-            $recipes = tbl_recipes::with('user', 'category', 'like_count', 'time', 'ingredients', 'ingredients.measure', 'instructions')
+            $recipes = tbl_recipes::with('user', 'category', 'like_count','comments', 'time', 'ingredients', 'ingredients.measure', 'instructions')
                     ->where('active', '=', 1)
                     ->orderBy('created_at', 'asc')
                     ->get();
         } else {
-            $recipes = tbl_recipes::with('user', 'category', 'like_count', 'time', 'ingredients', 'ingredients.measure', 'instructions')
+            $recipes = tbl_recipes::with('user', 'category', 'like_count','comments', 'time', 'ingredients', 'ingredients.measure', 'instructions')
                     ->where('active', '=', 1)
                     ->orderBy('created_at', 'desc')
                     ->get();

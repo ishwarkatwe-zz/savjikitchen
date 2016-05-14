@@ -147,11 +147,30 @@ $(document).ready(function () {
 var loadFile = function (event) {
     var image_url = URL.createObjectURL(event.target.files[0]);
     var strImage = image_url;
-    if (strImage != '') {
-        $.post(base_url + "/imageCrop", {strImage: strImage}, function (result) {
-            $('#commonTitle').html('Crop area of image');
-            $('#commonBody').html(result);
-        });
-        $('#commonBox').modal('show');
-    }
+	if (typeof (event.target.files) != "undefined") {
+		//Initiate the FileReader object.
+		var reader = new FileReader();
+		//Read the contents of Image File.
+		reader.readAsDataURL(event.target.files[0]);
+		reader.onload = function (e) {
+			var image = new Image();
+			image.src = e.target.result;
+			image.onload = function () {
+				var height = this.height;
+				var width = this.width;
+				if (parseInt(height) < 200 || parseInt(width) < 350) {
+					show_error("Please choose valid image with minimum dimension of 350px width and 200px height");
+					return false;
+				}
+				else if (strImage != '') {
+					$.post(base_url + "/imageCrop", {strImage: strImage}, function (result) {
+						$('#commonTitle').html('Crop area of image');
+						$('#commonBody').html(result);
+					});
+					$('#commonBox').modal('show');
+				}
+			};
+		}
+	}
+   
 };

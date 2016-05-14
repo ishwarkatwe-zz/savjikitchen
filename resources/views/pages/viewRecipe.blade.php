@@ -57,8 +57,8 @@
                     <ul class="nav nav-stacked">
                         <li><a href="{{ url('followers/F/'.$recipe->user->id) }}">Followers <span class="pull-right badge bg-orange"> {{ count($recipe->user->followers) }}</span></a></li>
                         <li><a href="{{ url('followers/I/'.$recipe->user->id) }}">Following <span class="pull-right badge bg-blue"> {{ count($recipe->user->following) }}</span></a></li>
-                        <li><a href="{{ url('my_recipe?userId='.$recipe->user->id) }}">Recipes <span class="pull-right badge bg-green">{{ $recipe->myRecipes(1,$recipe->user->id) }}</span></a></li>
-                    </ul>
+                        <li><a href="http://www.facebook.com/sharer.php?u=www.savjikitchen.com/view_recipe/{{ $recipe->id}}&t={{ $recipe->name }}">Recipes <span class="pull-right badge bg-green">{{ $recipe->myRecipes(1,$recipe->user->id) }}</span></a></li>
+					</ul>
                 </div>
             </div>
         </a>
@@ -149,7 +149,7 @@
                         @endif
                     </div>
                     <div class="col-md-4 text-center"><a href="javascript:void(0)" class="likeLink" class="text-muted" onclick="commentInLine({{ $recipe->id }})"><i class="fa fa-comment"></i> Add Comment</a></div>
-                    <div class="col-md-4 text-center"><a href="javascript:void(0)" class="likeLink" class="text-muted"><i class="fa fa-share"></i> Share</a></div>
+                    <div class="col-md-4 text-center"><a href="http://www.facebook.com/sharer.php?u=www.savjikitchen.com/view_recipe/{{ $recipe->id}}&t={{ $recipe->name }}"  onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="likeLink" class="text-muted"><i class="fa fa-share"></i> Share</a></div>
                 </div>
             </div>
             <div class="box-footer box-comments">

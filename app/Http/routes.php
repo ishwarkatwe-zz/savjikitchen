@@ -76,6 +76,7 @@ Route::group(['middleware' => ['auth']], function() {
         'as' => 'my_recipe', 'uses' => 'Recipe@myRecipe'
     ]);
 
+	
     Route::get('/view_recipe/{id}', [
         'as' => 'view_recipe', 'uses' => 'Recipe@viewRecipe'
     ]);
@@ -123,10 +124,13 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('/updateProfile', [
         'as' => 'updateProfile', 'uses' => 'Member@updateProfile'
     ]);
-
-    Route::get('/edit_recipe/{id}', [
-        'as' => 'edit_recipe', 'uses' => 'Recipe@editRecipe'
-    ]);
+	
+	Route::group(['middleware' => ['acs']], function() {
+		Route::get('/edit_recipe/{id}', [
+			'as' => 'edit_recipe', 'uses' => 'Recipe@editRecipe'
+		]);
+	});
+    
 
     Route::post('/processEditRecipe', [
         'as' => 'processEditRecipe', 'uses' => 'Recipe@processEditRecipe'

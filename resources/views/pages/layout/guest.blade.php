@@ -4,8 +4,43 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>{{ env('PROJECT_NAME') }} -  @yield('title')</title>
+		
+		<meta name="description" content="Savji community is known for its hot and spicy non-vegetarian delicacies and Savji masala in places where Savjis are concentrated in large numbers. Majority of the Savji people are non-vegetarian and hence preparation of variety of meat dishes is very common in the community. Goat meat, chicken and fish forms major component of Savji cuisine along with other vegetarian dishes. Alcohol consumption is not restricted in the community. Some of the common recipes include edmi (puris made of wheat flour, gram flour, chilies and other spices), khaimo or kheema (minced goat meat), shakanu chaknu (goat and chicken curry) prepared in special Savji spices. 
+
+Savji food is famous for its very hot and spicy flavor in many cities (where they are in large number) served in small family style restaurants called Savji khanavali or "Savji hotel" or bhojanalaya, found in large numbers in places like Hubli, Bangalore, Belgaum in Karnataka, Nagpur and Solapur in Maharashtra. There are a line of Savji bhojanalays in Nagpur that are very popular in Maharashtra. So much so that, the Indian chef Sanjeev Kapoor once featured Savji mutton on one of his shows and its recipe is also listed on his website." />
+
+		<!-- Schema.org markup for Google+ -->
+		<meta itemprop="name" content="{{ env('PROJECT_NAME') }} - Food lovers platform">
+		<meta itemprop="description" content="Savji community is known for its hot and spicy non-vegetarian delicacies and Savji masala in places where Savjis are concentrated in large numbers. Majority of the Savji people are non-vegetarian and hence preparation of variety of meat dishes is very common in the community. Goat meat, chicken and fish forms major component of Savji cuisine along with other vegetarian dishes. Alcohol consumption is not restricted in the community. Some of the common recipes include edmi (puris made of wheat flour, gram flour, chilies and other spices), khaimo or kheema (minced goat meat), shakanu chaknu (goat and chicken curry) prepared in special Savji spices. 
+
+Savji food is famous for its very hot and spicy flavor in many cities (where they are in large number) served in small family style restaurants called Savji khanavali or "Savji hotel" or bhojanalaya, found in large numbers in places like Hubli, Bangalore, Belgaum in Karnataka, Nagpur and Solapur in Maharashtra. There are a line of Savji bhojanalays in Nagpur that are very popular in Maharashtra. So much so that, the Indian chef Sanjeev Kapoor once featured Savji mutton on one of his shows and its recipe is also listed on his website.">
+		<meta itemprop="image" content="{{ url('assets_landing/images/logo.png') }}">
+
+		<!-- Twitter Card data -->
+		<meta name="twitter:card" content="Recipes">
+		<meta name="twitter:site" content="Savjikitchen">
+		<meta name="twitter:title" content="{{ env('PROJECT_NAME') }} - Food lovers platform">
+		<meta name="twitter:description" content="Savji community is known for its hot and spicy non-vegetarian delicacies and Savji masala in places where Savjis are concentrated in large numbers. Majority of the Savji people are non-vegetarian and hence preparation of variety of meat dishes is very common in the community. Goat meat, chicken and fish forms major component of Savji cuisine along with other vegetarian dishes. Alcohol consumption is not restricted in the community. Some of the common recipes include edmi (puris made of wheat flour, gram flour, chilies and other spices), khaimo or kheema (minced goat meat), shakanu chaknu (goat and chicken curry) prepared in special Savji spices. 
+
+Savji food is famous for its very hot and spicy flavor in many cities (where they are in large number) served in small family style restaurants called Savji khanavali or "Savji hotel" or bhojanalaya, found in large numbers in places like Hubli, Bangalore, Belgaum in Karnataka, Nagpur and Solapur in Maharashtra. There are a line of Savji bhojanalays in Nagpur that are very popular in Maharashtra. So much so that, the Indian chef Sanjeev Kapoor once featured Savji mutton on one of his shows and its recipe is also listed on his website.">
+		<meta name="twitter:creator" content="Savjikitchen">
+		<meta name="twitter:image" content="{{ url('assets_landing/images/logo.png') }}">
+		
+		<!-- Open Graph data -->
+		<meta property="og:title" content="{{ env('PROJECT_NAME') }} - Food lovers platform" />
+		<meta property="og:type" content="Cooking" />
+		<meta property="og:url" content="http://www.savjikitchen.com/" />
+		<meta property="og:image" content="{{ url('assets_landing/images/logo.png') }}" />
+		<meta property="og:description" content="Savji community is known for its hot and spicy non-vegetarian delicacies and Savji masala in places where Savjis are concentrated in large numbers. Majority of the Savji people are non-vegetarian and hence preparation of variety of meat dishes is very common in the community. Goat meat, chicken and fish forms major component of Savji cuisine along with other vegetarian dishes. Alcohol consumption is not restricted in the community. Some of the common recipes include edmi (puris made of wheat flour, gram flour, chilies and other spices), khaimo or kheema (minced goat meat), shakanu chaknu (goat and chicken curry) prepared in special Savji spices. 
+
+Savji food is famous for its very hot and spicy flavor in many cities (where they are in large number) served in small family style restaurants called Savji khanavali or "Savji hotel" or bhojanalaya, found in large numbers in places like Hubli, Bangalore, Belgaum in Karnataka, Nagpur and Solapur in Maharashtra. There are a line of Savji bhojanalays in Nagpur that are very popular in Maharashtra. So much so that, the Indian chef Sanjeev Kapoor once featured Savji mutton on one of his shows and its recipe is also listed on his website." />
+		<meta property="og:site_name" content="{{ env('PROJECT_NAME') }}" />
+		<meta property="og:price:amount" content="Free" />
+		<meta property="og:price:currency" content="ISD" />
+		
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		
         <!-- Bootstrap 3.3.5 -->
         <link type="text/css" rel="stylesheet" href="{{ URL::asset('plugins/bootstrap/css/bootstrap.min.css') }}" />
         <!-- Theme style -->

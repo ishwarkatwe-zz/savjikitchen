@@ -181,12 +181,13 @@ and open the template in the editor.
 		line-height: 50px;
 		border-radius: 50%;
 		cursor:pointer;
-		a{
+		
+	}
+	a{
 			text-decoration:none;
 			color:#FFFFFF;
-			font-size:20px;
+			font-size:16px;
 		}
-	}
 	
 	.facebook{
 		background-color: lighten(#3B5998,10%);
@@ -213,18 +214,21 @@ and open the template in the editor.
 		background-color:#BB0000;
 	}	
 	.thumbs{		
-		background-color: lighten(#03A9F4,10%);
+		font-size:14px;
+		background-color: lighten($pink-color,10%);
 	}
 	.thumbs:hover{
-		background-color:#03A9F4;
+		background-color:$pink-color;
 	}
 	.comments{		
+		font-size:14px;
 		background-color: lighten(#EA9F2E,10%);
 	}
 	.comments:hover{
 		background-color:#EA9F2E;
 	}
 	.share{		
+		font-size:14px;
 		background-color: lighten(#523FEC,10%);
 	}
 	.share:hover{

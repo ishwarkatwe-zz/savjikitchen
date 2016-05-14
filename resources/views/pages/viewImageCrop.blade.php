@@ -14,6 +14,7 @@
     <br>
     <br>
     <button class="btn btn-success" onclick="saveCrop()"><i class="fa fa-crop"></i> Crop Selection</button>
+	<button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i> Close</span></button>
 </div>
 
 <input type="hidden" id="mx" name="mx" />
@@ -41,9 +42,9 @@
             else {
                 $('#cropBoxModal').Jcrop({
                     onSelect: updateCoords,
-                    setSelect: [800, 600, 50, 50],
+                    setSelect: [300, 250, 50, 50],
                     aspectRatio: 16 / 9,
-                    minSize: [800, 600],
+                    minSize: [300, 250],
                     boxWidth: 500,
                     boxHeight: 500
                 });

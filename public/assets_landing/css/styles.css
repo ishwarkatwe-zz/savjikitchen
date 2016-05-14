@@ -168,27 +168,32 @@ and open the template in the editor.
       padding: 4px; }
     .recipes .thumbnail .footer .name {
       margin-left: 70px; }
+      .recipes .thumbnail .footer .name a {
+        text-decoration: none; }
       .recipes .thumbnail .footer .name p {
         font-family: 'Josefin Sans', sans-serif;
         color: #e63b4d;
         font-size: 16px;
-        margin-bottom: 0px; }
+        margin-bottom: 0px;
+        text-transform: capitalize; }
       .recipes .thumbnail .footer .name span {
         color: #DDD;
         color: #A2A2A2;
         font-size: 12px; }
     .recipes .thumbnail .footer .likes {
       color: #FFFFFF;
-      line-height: 40px;
+      line-height: 45px;
       margin-right: 10px;
       background-color: #e63b4d;
       border-radius: 50%;
-      width: 40px;
+      width: 45px;
       text-align: center;
-      height: 40px;
+      height: 45px;
       position: absolute;
       right: 10px;
       top: 10px; }
+    .recipes .thumbnail .footer .likes:hover {
+      background-color: #d31b2e; }
 
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -316,10 +321,10 @@ and open the template in the editor.
     line-height: 50px;
     border-radius: 50%;
     cursor: pointer; }
-    .btn-float li a {
-      text-decoration: none;
-      color: #FFFFFF;
-      font-size: 20px; }
+  .btn-float a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px; }
   .btn-float .facebook {
     background-color: #4c70ba; }
   .btn-float .facebook:hover {
@@ -337,14 +342,17 @@ and open the template in the editor.
   .btn-float .youtube:hover {
     background-color: #BB0000; }
   .btn-float .thumbs {
-    background-color: #2ebcfc; }
+    font-size: 14px;
+    background-color: #ec6876; }
   .btn-float .thumbs:hover {
-    background-color: #03A9F4; }
+    background-color: #e63b4d; }
   .btn-float .comments {
+    font-size: 14px;
     background-color: #efb45c; }
   .btn-float .comments:hover {
     background-color: #EA9F2E; }
   .btn-float .share {
+    font-size: 14px;
     background-color: #7c6df1; }
   .btn-float .share:hover {
     background-color: #523FEC; }
@@ -421,6 +429,9 @@ and open the template in the editor.
   background-color: rgba(0, 0, 0, 0.5);
   min-height: 82vh;
   position: relative; }
+
+.box.box-primary {
+  border-top-color: #e63b4d; }
 
 /*
 To change this license header, choose License Headers in Project Properties.

@@ -24,9 +24,9 @@
             <!-- Tab panes -->
             <div class="tab-content">
 				<ul class="hidden-xs btn-float btn-float-popup">
-					<li class="thumbs"><a href="view_recipe/{{recipedata.id}}"><i class="fa fa-thumbs-up"></i></a></li>
-					<li class="comments"><a href="view_recipe/{{recipedata.id}}"><i class="fa fa-comments"></i></a></li>
-					<li class="share"><a href="view_recipe/{{recipedata.id}}"><i class="fa fa-share"></i></a></li>
+					<a href="view_recipe/{{recipedata.id}}"><li class="thumbs"><i class="fa fa-thumbs-up"></i> {{recipedata.like_count.length}}</li></a>
+					<a href="view_recipe/{{recipedata.id}}"><li class="comments"><i class="fa fa-comments"></i> {{recipedata.comments.length}}</li></a>
+					<a href="http://www.facebook.com/sharer.php?u=www.savjikitchen.com/view_recipe/{{ $recipedata.id}}&t={{ $recipedata.name }}"  onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><li class="share"><i class="fa fa-share"></i></li></a>
 				</ul>
                 <div role="tabpanel" class="tab-pane active" id="home">
                     <ul>
