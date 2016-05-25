@@ -279,10 +279,10 @@ Savji food is famous for its very hot and spicy flavor in many cities (where the
             {
                 if (url != undefined)
                 {
-                    return 'http://<?php echo $_SERVER['HTTP_HOST']?>/savjikitchen/public/' + url;
+                    return 'http://<?php echo $_SERVER['HTTP_HOST']?>/' + url;
                 } else
                 {
-                    return 'http://<?php echo $_SERVER['HTTP_HOST']?>/savjikitchen/public/';
+                    return 'http://<?php echo $_SERVER['HTTP_HOST']?>/';
                 }
             }
             $(document).ready(function () {
