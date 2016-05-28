@@ -107,6 +107,7 @@ Savji food is famous for its very hot and spicy flavor in many cities (where the
 					<ul style="padding-left:0px;list-style:none">
 						<li><a href="{{ url('/') }}" style="color:#FFF">Home</a></li>
 						<li><a href="{{ url('/about') }}" style="color:#FFF">About</a></li>
+						<li><a href="{{ url('/contact') }}" style="color:#FFF">Contact</a></li>
 						<li><a href="{{ url('/auth/login') }}" style="color:#FFF">Login</a></li>
 						<li><a href="{{ url('/auth/register') }}" style="color:#FFF">Register</a></li>
 					</ul>
@@ -129,7 +130,7 @@ Savji food is famous for its very hot and spicy flavor in many cities (where the
 				
 			</div>
 			<div class="row text-center footer-bar">
-					&copy; 2016, Dynasofts Corporation
+					<strong> SavjiKitchen &copy; 2016</strong>
 			</div>
 		</footer>
 

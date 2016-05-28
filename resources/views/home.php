@@ -172,35 +172,36 @@ Savji food is famous for its very hot and spicy flavor in many cities (where the
 
         </section>
 
-		<section class="section about">
+		<section class="section">
 			<div class="container-fluid"><br>
 				<h2 class="text-center" style="color: #e63b4d;"><i class="fa fa-heart"></i> Most Loved Recipes</h2><br>
                 <div class="row">
-					<div class="col-md-3">                     
-						<iframe  src="https://www.youtube.com/embed/JUZYxhPeTfQ" frameborder="0" allowfullscreen></iframe>
+					<div class="col-md-3 col-sm-6 col-xs-12">                     
+						<iframe style="width:100%"  src="https://www.youtube.com/embed/JUZYxhPeTfQ" frameborder="0" allowfullscreen></iframe>
                     </div>
-					<div class="col-md-3">                    
-						<iframe  src="https://www.youtube.com/embed/2nklnBTvZYo" frameborder="0" allowfullscreen></iframe>
+					<div class="col-md-3 col-sm-6 col-xs-12">                    
+						<iframe style="width:100%"   src="https://www.youtube.com/embed/2nklnBTvZYo" frameborder="0" allowfullscreen></iframe>
                     </div>
-					<div class="col-md-3">                    
-						<iframe  src="https://www.youtube.com/embed/AiEgCu7jh60" frameborder="0" allowfullscreen></iframe>
+					<div class="col-md-3 col-sm-6 col-xs-12">                    
+						<iframe style="width:100%"   src="https://www.youtube.com/embed/AiEgCu7jh60" frameborder="0" allowfullscreen></iframe>
                     </div>
-					<div class="col-md-3">                     
-						<iframe  src="https://www.youtube.com/embed/6vy7x9F1Nb0" frameborder="0" allowfullscreen></iframe>
+					<div class="col-md-3 col-sm-6 col-xs-12">                     
+						<iframe style="width:100%"   src="https://www.youtube.com/embed/6vy7x9F1Nb0" frameborder="0" allowfullscreen></iframe>
                     </div>
-					<div class="col-md-3">                    
-						<iframe  src="https://www.youtube.com/embed/pAkwPSj52Hs" frameborder="0" allowfullscreen></iframe>
+					<div class="col-md-3 col-sm-6 col-xs-12">                    
+						<iframe style="width:100%"   src="https://www.youtube.com/embed/pAkwPSj52Hs" frameborder="0" allowfullscreen></iframe>
                     </div>
-					<div class="col-md-3">                  
-						<iframe  src="https://www.youtube.com/embed/nY7BHyRPxGo" frameborder="0" allowfullscreen></iframe>
+					<div class="col-md-3 col-sm-6 col-xs-12">                  
+						<iframe style="width:100%"   src="https://www.youtube.com/embed/nY7BHyRPxGo" frameborder="0" allowfullscreen></iframe>
                     </div>
-					<div class="col-md-3">              
-						<iframe  src="https://www.youtube.com/embed/hKwmMSVM5R4" frameborder="0" allowfullscreen></iframe>
+					<div class="col-md-3 col-sm-6 col-xs-12">              
+						<iframe style="width:100%"   src="https://www.youtube.com/embed/hKwmMSVM5R4" frameborder="0" allowfullscreen></iframe>
                     </div>
-					<div class="col-md-3">  
-						<iframe  src="https://www.youtube.com/embed/dlghXSdvxyA" frameborder="0" allowfullscreen></iframe>
+					<div class="col-md-3 col-sm-6 col-xs-12">  
+						<iframe style="width:100%"   src="https://www.youtube.com/embed/dlghXSdvxyA" frameborder="0" allowfullscreen></iframe>
                     </div>
 				</div>
+				<br><br>
 			</div>
 		</section>
 
@@ -247,6 +248,7 @@ Savji food is famous for its very hot and spicy flavor in many cities (where the
                     <ul style="padding-left:0px;list-style:none">
                         <li><a href="/index.php" style="color:#FFF">Home</a></li>
                         <li><a href="/about" style="color:#FFF">About</a></li>
+                        <li><a href="/contact" style="color:#FFF">Contact</a></li>
                         <li><a href="/auth/login" style="color:#FFF">Login</a></li>
                         <li><a href="/auth/register" style="color:#FFF">Register</a></li>
                     </ul>
@@ -269,7 +271,7 @@ Savji food is famous for its very hot and spicy flavor in many cities (where the
 
             </div>
             <div class="row text-center footer-bar">
-                SavjiKitchen &copy; <?php echo date('Y'); ?>, Powered by Dynasofts
+                SavjiKitchen &copy; <?php echo date('Y'); ?>
             </div>
         </footer>
 

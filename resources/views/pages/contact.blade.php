@@ -63,8 +63,6 @@
 		+91 9632463245<br/>
 		+91 9538650838<br/>
 		
-		<br/>
-		Powered By : Dynasofts solutions, Hubli<br/><br/>
 					<br/>
 	</div>
 </div>
