@@ -25,6 +25,8 @@
     "awesome-bootstrap-checkbox": "https://github.com/flatlogic/awesome-bootstrap-checkbox",
     "masonry": "^4.0.0",
     "angular-masonry": "^0.15.0",
-    "angular-bootstrap": "^1.1.2"
+    "angular-bootstrap": "^1.1.2",
+    "jquery.stellar": "stellar.js#^0.6.2",
+    "jquery.nicescroll": "nicescroll#^3.6.8"
   }
 }

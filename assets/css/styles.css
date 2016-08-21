@@ -1,0 +1,864 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps);
+/*title style*/
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #f2eee8;
+  padding: 0;
+  margin: 0; }
+
+* {
+  border-radius: 0px !important; }
+
+input {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200; }
+
+.vmiddle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.btn-black {
+  background: #212121;
+  border: none;
+  color: #FFFFFF;
+  border: 1px solid #212121;
+  text-transform: uppercase; }
+  .btn-black:hover, .btn-black:focus {
+    background: transparent;
+    color: #212121;
+    border: 1px solid #212121; }
+
+.btn-white {
+  background: #FFFFFF;
+  border: none;
+  color: #212121;
+  border: 1px solid #FFFFFF;
+  text-transform: uppercase; }
+  .btn-white:hover, .btn-white:focus {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF; }
+
+.masonry {
+  -moz-column-width: 13em;
+  -webkit-column-width: 13em;
+  -moz-column-gap: 1em;
+  -webkit-column-gap: 1em; }
+  .masonry .masonry-item {
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 1rem;
+    width: 100%;
+    background: #efefef; }
+
+.margin-top-10 {
+  margin-top: 10px; }
+
+.header {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.53) none repeat scroll 0% 0%;
+  width: 100%;
+  top: 12%;
+  z-index: 1; }
+  @media only screen and (max-width: 767px) {
+    .header .navbar-nav {
+      display: none; } }
+  .header .navbar-nav li.brand {
+    display: none; }
+  .header .navbar-nav li a {
+    color: #d9d9d9;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -ms-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition-duration: 0.35s;
+    -moz-transition-duration: 0.35s;
+    -ms-transition-duration: 0.35s;
+    -o-transition-duration: 0.35s;
+    transition-duration: 0.35s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-transition-property: background;
+    -moz-transition-property: background;
+    -ms-transition-property: background;
+    -o-transition-property: background;
+    transition-property: background; }
+    .header .navbar-nav li a:hover, .header .navbar-nav li a:active, .header .navbar-nav li a:focus {
+      background: RGBA(33, 33, 33, 0.51);
+      color: #f2f2f2; }
+
+.header.fixed {
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+  background: #FFFFFF none repeat scroll 0% 0%;
+  color: #212121;
+  box-shadow: 0px 0px 10px #363635;
+  -webkit-animation: mymove .8s;
+  /* Chrome, Safari, Opera */
+  animation: mymove .8s; }
+  .header.fixed .navbar-nav li.brand {
+    font-family: "Bilbo Swash Caps", cursive;
+    line-height: 40px;
+    display: block; }
+    .header.fixed .navbar-nav li.brand h2 {
+      font-size: 30px;
+      padding: 0px 20px;
+      color: #FF4081; }
+  .header.fixed .navbar-nav li a {
+    line-height: 40px;
+    color: #212121; }
+    .header.fixed .navbar-nav li a:hover, .header.fixed .navbar-nav li a:focus {
+      background: #FFFFFF;
+      color: #FF4081; }
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/* Standard syntax */
+@keyframes mymove {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  z-index: 99;
+  height: 100%;
+  opacity: .5; }
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url("../../assets/img/loading-spinner.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px; }
+
+.footer {
+  background: #e55145; }
+  .footer .footer-menu {
+    border: 1px solid #FFFFFF;
+    border-left: none;
+    border-right: none;
+    padding: 20px 0px; }
+    .footer .footer-menu .title {
+      color: #FFFFFF;
+      text-align: center;
+      font-family: "Bilbo Swash Caps", cursive;
+      padding: 20px 0px; }
+      .footer .footer-menu .title:before {
+        content: '';
+        position: absolute;
+        border-bottom: 1px solid #FFFFFF;
+        width: 30%;
+        left: 35%;
+        margin-top: 50px; }
+        @media only screen and (max-width: 767px) {
+          .footer .footer-menu .title:before {
+            opacity: 0; } }
+    .footer .footer-menu .categories {
+      list-style: none;
+      padding: 0px; }
+      @media only screen and (max-width: 767px) {
+        .footer .footer-menu .categories {
+          text-align: center; } }
+      .footer .footer-menu .categories li {
+        width: 50%;
+        float: left; }
+        .footer .footer-menu .categories li a {
+          color: #FFFFFF;
+          line-height: 30px;
+          font-size: 16px; }
+    .footer .footer-menu .social {
+      list-style: none;
+      text-align: center;
+      padding: 10px; }
+      .footer .footer-menu .social li {
+        cursor: pointer;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #FFFFFF;
+        border-radius: 50% !important;
+        text-align: center;
+        margin: 5px;
+        -webkit-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        transition-timing-function: ease;
+        -webkit-transition-duration: 0.35s;
+        -moz-transition-duration: 0.35s;
+        -ms-transition-duration: 0.35s;
+        -o-transition-duration: 0.35s;
+        transition-duration: 0.35s;
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -ms-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+        -webkit-transition-property: all;
+        -moz-transition-property: all;
+        -ms-transition-property: all;
+        -o-transition-property: all;
+        transition-property: all; }
+        .footer .footer-menu .social li:hover {
+          background: #FFFFFF; }
+          .footer .footer-menu .social li:hover a {
+            color: #e55145; }
+        .footer .footer-menu .social li a {
+          color: #FFFFFF;
+          line-height: 40px;
+          font-size: 20px; }
+    .footer .footer-menu .contact {
+      list-style: none;
+      padding: 0px;
+      text-align: center; }
+      .footer .footer-menu .contact li a {
+        color: #FFFFFF;
+        line-height: 30px;
+        font-size: 16px; }
+  .footer .cheif {
+    background: url(../img/good-food-chef.png);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  .footer .copywrite {
+    background: #212121;
+    height: 50px;
+    color: #FFFFFF;
+    text-align: center; }
+  .footer .to-top {
+    width: 50px;
+    height: 50px;
+    background: #f90;
+    color: #FFFFFF;
+    line-height: 50px;
+    font-size: 30px;
+    border-radius: 50% !important;
+    position: absolute;
+    right: 0%;
+    bottom: 2%;
+    cursor: pointer; }
+    .footer .to-top:hover, .footer .to-top:focus {
+      color: #FFFFFF; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28 Jul, 2016, 8:02:34 PM
+    Author     : Happy
+*/
+.panel-bg {
+  background: url(../img/polygon.png) #cd2928; }
+  @media only screen and (min-width: 1200px) and (max-width: 1823px) {
+    .panel-bg {
+      height: 100vh; } }
+  .panel-bg .haldi {
+    width: 300px; }
+    @media only screen and (max-width: 767px) {
+      .panel-bg .haldi {
+        width: 200px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .panel-bg .haldi {
+        width: 200px; } }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .panel-bg .haldi {
+        width: 250px; } }
+  .panel-bg .slogan {
+    line-height: 50px;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-family: "Bilbo Swash Caps", cursive; }
+    @media only screen and (max-width: 767px) {
+      .panel-bg .slogan {
+        font-size: 16px;
+        text-align: center; } }
+  .panel-bg .brand-logo .logo {
+    height: 300px;
+    margin-top: 50px; }
+    @media only screen and (max-width: 767px) {
+      .panel-bg .brand-logo .logo {
+        margin-top: 0px;
+        height: 200px; } }
+    .panel-bg .brand-logo .logo figure {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
+      .panel-bg .brand-logo .logo figure img {
+        width: 150px; }
+  .panel-bg .brand-logo .search .form-group {
+    margin: 20px 0px; }
+    @media only screen and (min-width: 1200px) and (max-width: 1823px) {
+      .panel-bg .brand-logo .search .form-group input {
+        width: 400px; } }
+  .panel-bg .brand-logo .quote {
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 25px;
+    padding: 20px 0px;
+    margin-bottom: 50px; }
+    .panel-bg .brand-logo .quote b {
+      color: #212121;
+      font-size: 20px; }
+  .panel-bg .brand-logo .mouse img {
+    width: 30px;
+    margin: 10px;
+    cursor: pointer; }
+  .panel-bg .brand-logo .mouse figcaption {
+    color: #FFFFFF; }
+  .panel-bg .parallex img {
+    position: absolute; }
+    .panel-bg .parallex img:nth-child(1) {
+      top: 42%;
+      left: 5%;
+      width: 180px; }
+    .panel-bg .parallex img:nth-child(2) {
+      top: 68%;
+      left: 15%;
+      width: 120px; }
+    .panel-bg .parallex img:nth-child(3) {
+      top: 83%;
+      left: 20%;
+      width: 120px; }
+    .panel-bg .parallex img:nth-child(4) {
+      top: 2%;
+      right: 5%;
+      height: 100vh;
+      z-index: 1; }
+  @media only screen and (max-width: 767px) {
+    .panel-bg .parallex {
+      display: none; } }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30 Jul, 2016, 7:21:40 PM
+    Author     : Happy
+*/
+.about {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), white), url(../../assets/img/about-left-kitchen.png);
+  background-repeat: no-repeat;
+  min-height: 500px;
+  padding-bottom: 50px; }
+  .about header .title {
+    color: #212121;
+    text-align: center;
+    font-family: "Bilbo Swash Caps", cursive;
+    font-size: 42px;
+    padding: 60px 0px; }
+    .about header .title:before {
+      content: '';
+      position: absolute;
+      border-bottom: 1px solid #FF4081;
+      width: 30%;
+      left: 35%;
+      margin-top: 50px; }
+    .about header .title:after {
+      content: '';
+      position: absolute;
+      border-bottom: 1px solid #FF4081;
+      width: 20%;
+      left: 40%;
+      margin-top: 60px; }
+  .about .about-desc {
+    line-height: 30px;
+    font-size: 16px;
+    color: #212121; }
+  .about .tomato img {
+    position: absolute;
+    left: 82%; }
+    @media only screen and (max-width: 767px) {
+      .about .tomato img {
+        display: none; } }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1 Aug, 2016, 7:31:35 PM
+    Author     : Happy
+*/
+.mouse {
+  position: absolute;
+  width: 22px;
+  height: 42px;
+  bottom: 5px;
+  left: 50%;
+  margin-left: -12px;
+  border-radius: 15px !important;
+  border: 2px solid #FFFFFF;
+  -webkit-animation: intro 1s;
+  animation: intro 1s; }
+  @media only screen and (max-width: 767px) {
+    .mouse {
+      bottom: 10px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .mouse {
+      bottom: 10px; } }
+
+.scroll {
+  display: block;
+  width: 3px;
+  height: 3px;
+  margin: 6px auto;
+  border-radius: 4px;
+  background: #FFFFFF;
+  -webkit-animation: finger 1s infinite;
+  animation: finger 1s infinite; }
+
+@-webkit-keyframes intro {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@-webkit-keyframes finger {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px); } }
+
+@keyframes finger {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px); } }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1 Aug, 2016, 9:36:03 PM
+    Author     : Happy
+*/
+.recipe-item {
+  padding: 15px; }
+  .recipe-item .recipe-card {
+    position: relative;
+    overflow: hidden; }
+    .recipe-item .recipe-card .overlay {
+      position: absolute;
+      opacity: 0;
+      background: transparent;
+      height: 100%;
+      -webkit-transition-timing-function: ease;
+      -moz-transition-timing-function: ease;
+      -ms-transition-timing-function: ease;
+      -o-transition-timing-function: ease;
+      transition-timing-function: ease;
+      -webkit-transition-duration: 0.35s;
+      -moz-transition-duration: 0.35s;
+      -ms-transition-duration: 0.35s;
+      -o-transition-duration: 0.35s;
+      transition-duration: 0.35s;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -ms-transition-delay: 0s;
+      -o-transition-delay: 0s;
+      transition-delay: 0s;
+      -webkit-transition-property: background;
+      -moz-transition-property: background;
+      -ms-transition-property: background;
+      -o-transition-property: background;
+      transition-property: background;
+      -webkit-transition-timing-function: ease;
+      -moz-transition-timing-function: ease;
+      -ms-transition-timing-function: ease;
+      -o-transition-timing-function: ease;
+      transition-timing-function: ease;
+      -webkit-transition-duration: 0.35s;
+      -moz-transition-duration: 0.35s;
+      -ms-transition-duration: 0.35s;
+      -o-transition-duration: 0.35s;
+      transition-duration: 0.35s;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -ms-transition-delay: 0s;
+      -o-transition-delay: 0s;
+      transition-delay: 0s;
+      -webkit-transition-property: height;
+      -moz-transition-property: height;
+      -ms-transition-property: height;
+      -o-transition-property: height;
+      transition-property: height; }
+      .recipe-item .recipe-card .overlay .overlay-bg {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        transition-timing-function: ease;
+        -webkit-transition-duration: 0.35s;
+        -moz-transition-duration: 0.35s;
+        -ms-transition-duration: 0.35s;
+        -o-transition-duration: 0.35s;
+        transition-duration: 0.35s;
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -ms-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+        -webkit-transition-property: top;
+        -moz-transition-property: top;
+        -ms-transition-property: top;
+        -o-transition-property: top;
+        transition-property: top; }
+        .recipe-item .recipe-card .overlay .overlay-bg a {
+          text-decoration: none;
+          color: #FFFFFF; }
+          .recipe-item .recipe-card .overlay .overlay-bg a span {
+            font-size: 10px;
+            border: 1px solid #FFF;
+            padding: 10px; }
+    .recipe-item .recipe-card figure img {
+      width: 100%;
+      height: auto; }
+    .recipe-item .recipe-card figure figcaption {
+      position: absolute;
+      opacity: 0;
+      background: rgba(180, 45, 44, 0.9);
+      width: 100%;
+      height: 30%;
+      color: #fff;
+      padding: 10px;
+      bottom: -50px;
+      padding: 2px 10px;
+      -webkit-transition-timing-function: ease;
+      -moz-transition-timing-function: ease;
+      -ms-transition-timing-function: ease;
+      -o-transition-timing-function: ease;
+      transition-timing-function: ease;
+      -webkit-transition-duration: 0.35s;
+      -moz-transition-duration: 0.35s;
+      -ms-transition-duration: 0.35s;
+      -o-transition-duration: 0.35s;
+      transition-duration: 0.35s;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -ms-transition-delay: 0s;
+      -o-transition-delay: 0s;
+      transition-delay: 0s;
+      -webkit-transition-property: all;
+      -moz-transition-property: all;
+      -ms-transition-property: all;
+      -o-transition-property: all;
+      transition-property: all; }
+      .recipe-item .recipe-card figure figcaption h4 .like {
+        float: right; }
+      .recipe-item .recipe-card figure figcaption p {
+        margin: 1px 0px; }
+        @media only screen and (max-width: 767px) {
+          .recipe-item .recipe-card figure figcaption p {
+            opacity: 0; } }
+    .recipe-item .recipe-card:hover .overlay {
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 70%; }
+      .recipe-item .recipe-card:hover .overlay .overlay-bg {
+        top: 50%; }
+        .recipe-item .recipe-card:hover .overlay .overlay-bg span {
+          font-size: 14px; }
+    .recipe-item .recipe-card:hover figure figcaption {
+      opacity: 1;
+      bottom: 0px; }
+
+/*.recipe-card{
+    figure{
+        img{
+            width: 100%;
+        }
+    }
+    .overlay {
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        height: 100%;
+        right: 15px;
+        background: transparent;
+        text-align: center;    
+        @include animate(all);
+        .overlay-inverse{
+            position: relative;
+            top:0%;
+            left:50%;
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            -moz-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+            a{
+                font-size: 10px;
+                color: $white;
+                text-decoration: none;
+                @include animate(all);
+            }
+        }
+    }
+
+    &:hover{
+        .overlay {
+            background: rgba(19, 17, 17, 0.8);
+            .overlay-inverse{
+                opacity: 1;
+                top:50%;
+                a{
+                    font-size: 20px;
+                }
+
+            }
+        }
+    }
+
+}*/
+/*.recipe-card{
+    @include animate(all);
+    .caption{
+        h4{
+            margin:0px;
+        }        
+    }
+
+
+    .overlay {
+        position: absolute;
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        width: 100%;
+        top: 0%;
+        left: 50%;
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+
+        .action{
+            text-decoration: none;
+            font-size: 40px;
+            color: $accent-color;
+        }
+    }
+
+    &:hover {
+        img {
+            -webkit-filter: grayscale(100%);  Chrome, Safari, Opera 
+            filter: grayscale(100%);
+            z-index: 1;
+        }
+        .overlay{
+            top: 50%;
+            opacity: 1;
+            z-index: 2;
+        }
+    }
+
+}*/
+.our-recipes {
+  background: url(../../assets/img/right-kitchen-vector.png), linear-gradient(to right, rgba(33, 33, 33, 0.9), rgba(33, 33, 33, 0.9));
+  background-position: right;
+  background-blend-mode: overlay;
+  min-height: 500px;
+  background-repeat: no-repeat;
+  overflow: hidden; }
+  .our-recipes header .title {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Bilbo Swash Caps", cursive;
+    font-size: 42px;
+    padding: 60px 0px; }
+    .our-recipes header .title:before {
+      content: '';
+      position: absolute;
+      border-bottom: 1px solid #FF4081;
+      width: 30%;
+      left: 35%;
+      margin-top: 50px; }
+    .our-recipes header .title:after {
+      content: '';
+      position: absolute;
+      border-bottom: 1px solid #FF4081;
+      width: 20%;
+      left: 40%;
+      margin-top: 60px; }
+  .our-recipes .item {
+    padding: 10px; }
+    .our-recipes .item .recipe-item {
+      background: #FFF;
+      padding: 5px 5px 0px 5px;
+      display: inline-block; }
+      .our-recipes .item .recipe-item figure:after {
+        content: 'asas';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        transition: all 1s;
+        -webkit-transition: all 1s; }
+      .our-recipes .item .recipe-item figure:after:hover {
+        opacity: 1; }
+      .our-recipes .item .recipe-item figure figcaption {
+        color: #212121;
+        font-size: 18px;
+        line-height: 40px;
+        float: left; }
+      .our-recipes .item .recipe-item .social {
+        float: right;
+        margin-top: 10px;
+        list-style: none; }
+        .our-recipes .item .recipe-item .social li {
+          display: inline-block;
+          font-size: 16px;
+          width: 30px;
+          text-align: center; }
+          .our-recipes .item .recipe-item .social li a {
+            color: #FF4081; }
+  .our-recipes .more-btn {
+    margin: 20px; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2 Aug, 2016, 8:36:51 PM
+    Author     : Happy
+*/
+.yt-channel {
+  min-height: 500px;
+  padding-bottom: 40px; }
+  .yt-channel header .title {
+    color: #212121;
+    text-align: center;
+    font-family: "Bilbo Swash Caps", cursive;
+    font-size: 42px;
+    padding: 60px 0px; }
+    .yt-channel header .title:before {
+      content: '';
+      position: absolute;
+      border-bottom: 1px solid #FF4081;
+      width: 30%;
+      left: 35%;
+      margin-top: 50px; }
+    .yt-channel header .title:after {
+      content: '';
+      position: absolute;
+      border-bottom: 1px solid #FF4081;
+      width: 20%;
+      left: 40%;
+      margin-top: 60px; }
+  .yt-channel .main {
+    padding: 5px; }
+    .yt-channel .main iframe {
+      width: 100%;
+      height: 23vw; }
+      @media only screen and (max-width: 767px) {
+        .yt-channel .main iframe {
+          height: 200px; } }
+  .yt-channel .sub {
+    height: 24vw; }
+    @media only screen and (max-width: 767px) {
+      .yt-channel .sub {
+        height: 200px; } }
+    .yt-channel .sub div {
+      padding: 5px; }
+      .yt-channel .sub div iframe {
+        width: 100%; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3 Aug, 2016, 7:35:51 PM
+    Author     : Happy
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3 Aug, 2016, 8:01:10 PM
+    Author     : Happy
+*/
+.newletter {
+  background: #f90;
+  color: #FFFFFF; }
+  @media only screen and (min-width: 1200px) and (max-width: 1823px) {
+    .newletter {
+      height: 100px; } }
+  .newletter .newletter-form {
+    height: 150px; }
+    @media only screen and (min-width: 1200px) and (max-width: 1823px) {
+      .newletter .newletter-form {
+        height: 100px; } }
+    .newletter .newletter-form input {
+      width: 80%; }
+    .newletter .newletter-form button {
+      margin-top: 10px; }
+      @media only screen and (min-width: 1200px) and (max-width: 1823px) {
+        .newletter .newletter-form button {
+          margin-top: 0px; } }
