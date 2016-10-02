@@ -70,7 +70,7 @@ class Recipe extends Controller {
             $image_width = $request->w;
             $image_height = $request->h;
 
-            Image::make($image->getRealPath())->crop($image_width, $image_height, $image_x, $image_y)->resize(800, 600)->save($path);
+            Image::make($image->getRealPath())->crop($image_width, $image_height, $image_x, $image_y)->resize(800, 450)->save($path);
         }
 
         $recipe = new tbl_recipes;
@@ -279,8 +279,9 @@ class Recipe extends Controller {
 })->save($path);
 
 			
-
-            File::delete($old_image);
+            if(file_exists($old_image)){
+                File::delete($old_image);
+            }
         }
         $recipe_id = $request->recipe_id;
         if (!empty($recipe_id)) {

@@ -14,12 +14,45 @@
 
 
 
+Route::any('/checkLogin', function() {
+    if (Auth::check()) {
+        echo '1';
+    } else {
+        echo '0';
+    }
+});
+
+
+Route::any('/postLogin', function() {
+    if (!empty($_POST['email']) && !empty($_POST['password'])) {
+        if (Auth::attempt(['email' => $_POST['email'], 'password' => $_POST['password']])) {
+            echo '1';
+        } else {
+            echo '0';
+        }
+    }
+});
+
 Route::get('/', [
     'as' => '/', 'uses' => 'HomeController@home'
 ]);
 
+Route::get('/search/{keyword}', [
+    'as' => '/search', 'uses' => 'HomeController@search'
+]);
+
+Route::any('/search', [
+    'as' => '/search', 'uses' => 'HomeController@search'
+]);
+
 Route::get('/viewDetail/{id}', [
     'as' => 'viewDetail', 'uses' => 'HomeController@viewDetail'
+]);
+
+
+
+Route::post('/subscribe/', [
+    'as' => 'subscribe', 'uses' => 'HomeController@subscribe'
 ]);
 
 
@@ -48,12 +81,11 @@ Route::get('/contact', 'Home@contact');
 
 Route::post('/saveReview', 'Home@saveReview');
 //Route::get('/', 'Home@index');
-
 //CORS
 Route::group(['middleware' => ['cors']], function() {
     Route::get('getRecent', 'RestController@getRecent');
-	Route::any('getPost', 'RestController@getPost');
-});    
+    Route::any('getPost', 'RestController@getPost');
+});
 
 Route::group(['middleware' => ['auth']], function() {
 
@@ -89,7 +121,7 @@ Route::group(['middleware' => ['auth']], function() {
         'as' => 'my_recipe', 'uses' => 'Recipe@myRecipe'
     ]);
 
-	
+
     Route::get('/view_recipe/{id}', [
         'as' => 'view_recipe', 'uses' => 'Recipe@viewRecipe'
     ]);
@@ -137,13 +169,13 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('/updateProfile', [
         'as' => 'updateProfile', 'uses' => 'Member@updateProfile'
     ]);
-	
-	Route::group(['middleware' => ['acs']], function() {
-		Route::get('/edit_recipe/{id}', [
-			'as' => 'edit_recipe', 'uses' => 'Recipe@editRecipe'
-		]);
-	});
-    
+
+    Route::group(['middleware' => ['acs']], function() {
+        Route::get('/edit_recipe/{id}', [
+            'as' => 'edit_recipe', 'uses' => 'Recipe@editRecipe'
+        ]);
+    });
+
 
     Route::post('/processEditRecipe', [
         'as' => 'processEditRecipe', 'uses' => 'Recipe@processEditRecipe'

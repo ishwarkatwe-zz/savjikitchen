@@ -41,12 +41,12 @@ input {
     color: #FFFFFF;
     border: 1px solid #FFFFFF; }
 
-.masonry {
+.masonry-grid {
   -moz-column-width: 13em;
   -webkit-column-width: 13em;
   -moz-column-gap: 1em;
   -webkit-column-gap: 1em; }
-  .masonry .masonry-item {
+  .masonry-grid .masonry-item {
     display: inline-block;
     margin: 0.25rem;
     padding: 1rem;
@@ -55,6 +55,12 @@ input {
 
 .margin-top-10 {
   margin-top: 10px; }
+
+.required {
+  color: #f00; }
+
+.margin10 {
+  margin: 10px 0px; }
 
 .header {
   position: absolute;
@@ -107,10 +113,11 @@ input {
     font-family: "Bilbo Swash Caps", cursive;
     line-height: 40px;
     display: block; }
-    .header.fixed .navbar-nav li.brand h2 {
+    .header.fixed .navbar-nav li.brand h2 a {
       font-size: 30px;
       padding: 0px 20px;
-      color: #FF4081; }
+      color: #FF4081;
+      text-decoration: none; }
   .header.fixed .navbar-nav li a {
     line-height: 40px;
     color: #212121; }
@@ -155,7 +162,7 @@ input {
   margin: -100px 0 0 -100px; }
 
 .footer {
-  background: #e55145; }
+  background: #c72727; }
   .footer .footer-menu {
     border: 1px solid #FFFFFF;
     border-left: none;
@@ -176,6 +183,8 @@ input {
         @media only screen and (max-width: 767px) {
           .footer .footer-menu .title:before {
             opacity: 0; } }
+    .footer .footer-menu .cat-list {
+      z-index: 2; }
     .footer .footer-menu .categories {
       list-style: none;
       padding: 0px; }
@@ -225,7 +234,7 @@ input {
         .footer .footer-menu .social li:hover {
           background: #FFFFFF; }
           .footer .footer-menu .social li:hover a {
-            color: #e55145; }
+            color: #c72727; }
         .footer .footer-menu .social li a {
           color: #FFFFFF;
           line-height: 40px;
@@ -243,6 +252,10 @@ input {
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat; }
+    @media only screen and (max-width: 767px) {
+      .footer .cheif {
+        background-position: bottom right;
+        background-size: 50% 50%; } }
   .footer .copywrite {
     background: #212121;
     height: 50px;
@@ -273,7 +286,7 @@ and open the template in the editor.
     Author     : Happy
 */
 .panel-bg {
-  background: url(../img/polygon.png) #cd2928; }
+  background: url(../img/polygon.png) #b40000; }
   @media only screen and (min-width: 1200px) and (max-width: 1823px) {
     .panel-bg {
       height: 100vh; } }
@@ -599,9 +612,6 @@ and open the template in the editor.
         float: right; }
       .recipe-item .recipe-card figure figcaption p {
         margin: 1px 0px; }
-        @media only screen and (max-width: 767px) {
-          .recipe-item .recipe-card figure figcaption p {
-            opacity: 0; } }
     .recipe-item .recipe-card:hover .overlay {
       opacity: 1;
       background: rgba(0, 0, 0, 0.6);
@@ -614,6 +624,8 @@ and open the template in the editor.
     .recipe-item .recipe-card:hover figure figcaption {
       opacity: 1;
       bottom: 0px; }
+      .recipe-item .recipe-card:hover figure figcaption h4 {
+        margin-bottom: 5px; }
 
 /*.recipe-card{
     figure{
@@ -862,3 +874,246 @@ and open the template in the editor.
       @media only screen and (min-width: 1200px) and (max-width: 1823px) {
         .newletter .newletter-form button {
           margin-top: 0px; } }
+
+.view-recipe recipe-name.h2 {
+  color: #474747; }
+
+.view-recipe .social-links .share {
+  float: left;
+  line-height: 40px;
+  font-size: 16px; }
+
+.view-recipe .social-links ul {
+  margin: 10px 0px;
+  padding: 0px; }
+  .view-recipe .social-links ul li {
+    list-style: none;
+    display: inline;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+    padding: 0px 5px; }
+    .view-recipe .social-links ul li a {
+      color: #474747;
+      line-height: 40px;
+      font-size: 20px; }
+    .view-recipe .social-links ul li:hover a {
+      color: #c72727; }
+
+.view-recipe .titles {
+  background: #404040;
+  line-height: 40px;
+  color: #FFFFFF;
+  font-weight: 300;
+  margin: 10px 0px;
+  font-size: 18px;
+  padding: 0px 10px; }
+
+.view-recipe ul.ingredients {
+  padding-left: 15px; }
+  .view-recipe ul.ingredients li {
+    list-style-type: square;
+    line-height: 30px; }
+
+.view-recipe p.desc {
+  margin: 10px 0px;
+  font-size: 14px;
+  line-height: 25px; }
+
+.view-recipe .recipe-view {
+  background: #FFFFFF;
+  padding: 8px; }
+  .view-recipe .recipe-view .recipe-cover {
+    background: url("../img/r2.jpg"), linear-gradient(to right, rgba(234, 24, 24, 0.22), rgba(255, 161, 81, 0.2));
+    height: 300px;
+    background-blend-mode: lighten !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    margin: 0px 0px 10px 0px; }
+
+.view-recipe .steps h4 {
+  padding: 10px 0px;
+  margin: 0px; }
+
+.view-recipe .steps ol {
+  padding-left: 15px; }
+  .view-recipe .steps ol li {
+    line-height: 25px;
+    font-size: 14px;
+    padding: 2px 0px; }
+
+.view-recipe .searchbox {
+  margin: 15px 0px; }
+  .view-recipe .searchbox input {
+    width: 85%;
+    float: left; }
+
+.view-recipe .side-menu {
+  background: #FFFFFF; }
+  .view-recipe .side-menu ul {
+    padding: 0px 10px; }
+    .view-recipe .side-menu ul li {
+      list-style: none;
+      border-bottom: 1px solid #e7e7e7;
+      padding: 5px 0px; }
+      .view-recipe .side-menu ul li a {
+        text-decoration: none;
+        color: #474747;
+        line-height: 40px;
+        font-size: 14px; }
+        .view-recipe .side-menu ul li a label {
+          float: right;
+          margin: 10px 0px; }
+        .view-recipe .side-menu ul li a:hover {
+          color: #c72727; }
+          .view-recipe .side-menu ul li a:hover label {
+            background: #c72727;
+            color: #FFFFFF; }
+
+.view-recipe .tags {
+  padding: 10px; }
+  .view-recipe .tags a {
+    margin: 2px; }
+
+.view-recipe .recent-box {
+  margin: 20px 0px; }
+  .view-recipe .recent-box a {
+    text-decoration: none;
+    color: #474747; }
+    .view-recipe .recent-box a .recipe-row {
+      min-height: 75px;
+      margin: 10px 0px; }
+      .view-recipe .recent-box a .recipe-row img {
+        width: auto;
+        height: 70px;
+        float: left;
+        border: 3px solid #fff;
+        margin-right: 5px; }
+      .view-recipe .recent-box a .recipe-row h5 {
+        font-size: 12px;
+        line-height: 16px; }
+      .view-recipe .recent-box a .recipe-row span {
+        font-size: 12px; }
+    .view-recipe .recent-box a:hover {
+      color: #c72727; }
+
+.view-recipe .no-comments {
+  font-size: 16px;
+  text-align: center;
+  color: #474747;
+  padding: 20px 0px; }
+
+.view-recipe .comment {
+  margin: 10px 0px;
+  background: #f4f4f6;
+  padding: 10px;
+  border-radius: 5px !important;
+  box-shadow: 0px 3px 0px #dadada; }
+  .view-recipe .comment img {
+    margin: 10px 0px;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; }
+  .view-recipe .comment h5 {
+    margin: 10px 0px; }
+  .view-recipe .comment p {
+    line-height: 25px;
+    font-size: 14px;
+    margin-left: 60px; }
+  .view-recipe .comment .date {
+    float: right;
+    font-size: 12px;
+    margin: 10px 0px; }
+
+.masonry {
+  -moz-column-width: 16em;
+  -webkit-column-width: 16em;
+  -moz-column-gap: .8em;
+  -webkit-column-gap: .8em; }
+  .masonry .card {
+    display: inline-block;
+    margin: 0.7rem;
+    width: 100%;
+    background: #FFFFFF;
+    position: relative; }
+    .masonry .card:hover {
+      box-shadow: 0px 2px 0px #c72727; }
+      .masonry .card:hover .caption h2 {
+        color: #c72727; }
+      .masonry .card:hover img {
+        opacity: 1; }
+    .masonry .card a {
+      text-decoration: none;
+      color: #333; }
+      .masonry .card a img {
+        width: 100%;
+        min-height: 150px;
+        opacity: .9;
+        -webkit-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        transition-timing-function: ease;
+        -webkit-transition-duration: 0.35s;
+        -moz-transition-duration: 0.35s;
+        -ms-transition-duration: 0.35s;
+        -o-transition-duration: 0.35s;
+        transition-duration: 0.35s;
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -ms-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+        -webkit-transition-property: opacity;
+        -moz-transition-property: opacity;
+        -ms-transition-property: opacity;
+        -o-transition-property: opacity;
+        transition-property: opacity; }
+      .masonry .card a .views {
+        opacity: .8;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        line-height: 25px;
+        padding: 5px;
+        font-size: 15px;
+        background: #9d0a0a;
+        color: rgba(255, 255, 255, 0.9);
+        -webkit-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        transition-timing-function: ease;
+        -webkit-transition-duration: 0.35s;
+        -moz-transition-duration: 0.35s;
+        -ms-transition-duration: 0.35s;
+        -o-transition-duration: 0.35s;
+        transition-duration: 0.35s;
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -ms-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+        -webkit-transition-property: all;
+        -moz-transition-property: all;
+        -ms-transition-property: all;
+        -o-transition-property: all;
+        transition-property: all; }
+      .masonry .card a .caption {
+        padding: 1rem; }
+        .masonry .card a .caption h2 {
+          margin: 0px;
+          font-size: 18px;
+          line-height: 25px;
+          color: #212121; }
+        .masonry .card a .caption p {
+          font-size: 14px;
+          margin: 0px;
+          padding: 10px 0px; }
+        .masonry .card a .caption small .views {
+          float: right;
+          color: #727272;
+          font-size: 14px;
+          line-height: 1.42857; }

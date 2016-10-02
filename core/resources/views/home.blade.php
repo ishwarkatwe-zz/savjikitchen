@@ -8,7 +8,7 @@
 
         <!-- Bootstrap -->
         <link href="{{URL::asset('bower_components/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
-        
+
 
         <!--fontawesome-->
         <link rel="stylesheet" href="{{URL::asset('bower_components/font-awesome/css/font-awesome.min.css')}}"/>
@@ -27,13 +27,13 @@
         <div id="fb-root"></div>
         <script>
             (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id))
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id))
                     return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7&appId=246263435539826";
-                fjs.parentNode.insertBefore(js, fjs);
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7&appId=246263435539826";
+            fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
         </script>
 
@@ -52,7 +52,19 @@
                         <li><a href="#recipesSection">Recent Recipes</a></li>
                         <li><a href="#youtubeSection">Video Recipes</a></li>
                         <li><a href="#footer">Categories</a></li>
-                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="#" onclick="window.location ='{{ url('/contact')}}'">Contact</a></li>
+                        <li><a href="#" onclick="window.location ='{{ url('/profile')}}'"><i class="fa fa-user"></i> Welcome : 
+                                @if(!Auth::check()) 
+                                Guest  
+                                @else  
+                                {{ Auth::user()->userName() }}
+                                @endif
+                            </a></li>
+                        @if(!Auth::check())
+                        <li><a href="#" onclick="window.location ='{{ url('/auth/login')}}'"><i class="fa fa-key"></i> Sign-In</a></li>     
+                        @else
+                        <li><a href="#" onclick="window.location ='{{ url('/auth/logout')}}'"><i class="fa fa-sign-out"></i> Log Out</a></li>   
+                        @endif
                     </ul>
                 </nav>     
             </div>
@@ -77,7 +89,7 @@
                             </figure>
                         </div>
                         <div class="col-md-8 col-sm-8 slogan">
-                            <p>We have more than 40,000 of cooking recipes</p>
+                            <p>We have more than 4,000+ followers in social media</p>
                         </div>
                     </div>
                     <div class="row">
@@ -90,9 +102,10 @@
 
                             <div class="row">
                                 <div class="col-md-6 col-md-offset-3">
-                                    <form class="form-inline search">
+                                    <form method="POST" class="form-inline search" action="{{ url('/search') }}">
+                                        {!! csrf_field() !!}
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="keyword" placeholder="Find Recipe">
+                                            <input type="text" class="form-control" name="keyword" id="keyword" placeholder="Find Recipe">
                                         </div>
                                         <button type="submit" class="btn btn-black">Search</button>
                                     </form>
@@ -128,7 +141,7 @@
                             <p class="about-desc">Savji community is known for its hot and spicy non-vegetarian delicacies and Savji masala in places where Savjis are concentrated in large numbers. Majority of the Savji people are non-vegetarian and hence preparation of variety of meat dishes is very common in the community. Goat meat, chicken and fish forms major component of Savji cuisine along with other vegetarian dishes. Alcohol consumption is not restricted in the community. Some of the common recipes include edmi (puris made of wheat flour, gram flour, chilies and other spices), khaimo or kheema (minced goat meat), shakanu chaknu (goat and chicken curry) prepared in special Savji spices.</p>
 
                             <div class="pull-right">
-                                <button class="btn btn-black"><i class="fa fa-arrow-right"></i> More info</button>
+                                <a href="{{ url('/search') }}"  class="btn btn-black"><i class="fa fa-arrow-right"></i> More info</a>
                             </div>
                         </div>
                     </div>
@@ -166,7 +179,7 @@
                         @endforeach
                         <div class="clearfix"></div>
                         <div class="text-center">
-                            <button class="btn btn-white more-btn">See More</button>
+                            <a href="{{ url('/search') }}" class="btn btn-white more-btn">See More</a>
                         </div>
                     </div>
                 </div>
@@ -175,7 +188,7 @@
 
 
             <!--Start Video Channel-->
-            <section class="yt-channel" id="youtubeSection">
+            <section class="yt-channel" id="youtubeSection" style="display:none">
                 <div class="container">
                     <header>
                         <h2 class="title"><span>Video Recipes</span></h2>
@@ -218,9 +231,11 @@
                             <h2><i class="fa fa-envelope"></i> NEWSLETTER</h2><span>Get updates about new dishes and recent recipes</span>
                         </div>
                         <div class="col-md-6 col-xs-12 col-sm-6 newletter-form">
-                            <form class="form-inline vmiddle">
-                                <input type="text" class="form-control" id="emailSubscribe" name="emailSubscribe" placeholder="Email Address">
+                            <form method="POST" class="form-inline vmiddle" action="{{ url('/subscribe') }}">
+                                {!! csrf_field() !!}
+                                <input type="text" class="form-control" id="emailSubscribe" name="emailSubscribe" placeholder="Email Address" required="">
                                 <button type="submit" class="btn btn-black">Subscribe</button>
+                                <b>{{ Session::get('message') }}</b>
                             </form>
                         </div>
                     </div>
@@ -246,10 +261,10 @@
                         <div class="col-md-4 col-sm-6 cheif">
                             <h2 class="title">Connect Us</h2>
                             <ul class="social">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/Savjikitchen/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/savjikitchen"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://plus.google.com/103682649455187926306"><i class="fa fa-google"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCw0CIGjw96q1yKnHysKZ1NA"><i class="fa fa-youtube"></i></a></li>
                             </ul>
                             <h2 class="title">Contact Us</h2>
                             <ul class="contact">
@@ -276,40 +291,35 @@
         <script src="{{URL::asset('bower_components/jquery.nicescroll/dist/jquery.nicescroll.min.js')}}"></script>
         <script>
             $.stellar();
-            $("html").niceScroll({
-                scrollspeed: 100,
-                bouncescroll: true
-            });
-
-
             jQuery(window).load(function () {
-                // will first fade out the loading animation
-                jQuery("#status").fadeOut();
-                // will fade out the whole DIV that covers the website.
-                jQuery("#preloader").delay(1000).fadeOut("slow");
+            // will first fade out the loading animation
+            jQuery("#status").fadeOut();
+            // will fade out the whole DIV that covers the website.
+            jQuery("#preloader").delay(1000).fadeOut("slow");
+//            $("html").niceScroll({
+//            scrollspeed: 100,
+//                    bouncescroll: true
+//            });
             });
-
-
-
             $("#target").click(function () {
-                $('html, body').animate({scrollTop: '0px'}, 300);
+            $('html, body').animate({scrollTop: '0px'}, 300);
             });
-
             $(window).bind('scroll', function () {
-                if ($(window).scrollTop() > 50) {
-                    $('.header').addClass('fixed');
-                } else {
-                    $('.header').removeClass('fixed');
-                }
+            if ($(window).scrollTop() > 50) {
+            $('.header').addClass('fixed');
+            } else {
+            $('.header').removeClass('fixed');
+            }
+            });
+            $(document).on('click', 'nav li a', function (event) {
+            event.preventDefault();
+            $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
             });
 
-$(document).on('click', 'nav li a', function(event){
-    event.preventDefault();
 
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
-});
+
         </script>
     </body>
 </html>

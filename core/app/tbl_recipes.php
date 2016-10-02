@@ -19,10 +19,10 @@ class tbl_recipes extends Model {
 
     public function recipeImage() {
         $image = $this->image;
-        if (File::exists('img/' . $image) && !empty($image)) {
-            $url = url('img/' . $this->image);
+        if (File::exists('core/public/img/' . $image) && !empty($image)) {
+            $url = url('core/public/img/' . $this->image);
         } else {
-            $url = url('img/default.png');
+            $url = url('core/public/default.png');
         }
         return $url;
     }
@@ -109,6 +109,10 @@ class tbl_recipes extends Model {
         return $this->hasMany('App\tbl_recipe_likes', 'recipe_id', 'id')->where('tbl_recipe_likes.like', '=', 1);
     }
 
+    public function views() {
+        return $this->hasMany('App\View', 'recipe_id', 'id')->count();
+    }
+    
     public function likes() {
         return $this->hasMany('App\tbl_recipe_likes', 'recipe_id', 'id');
     }
@@ -138,6 +142,13 @@ class tbl_recipes extends Model {
 
     public function tag() {
         return $this->belongsToMany('App\tags', 'recipe_tags', 'recipe_id', 'tag_id');
+    }
+
+    public function scopeSearch($query, $searchTerm) {
+        return $query
+            ->where('name', 'like', "%" . $searchTerm . "%")
+            ->orWhere('description', 'like', "%" . $searchTerm . "%")
+            ->orWhere('note', 'like', "%" . $searchTerm . "%");
     }
 
 }
